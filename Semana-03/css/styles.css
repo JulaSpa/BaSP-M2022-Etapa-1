@@ -184,3 +184,197 @@
     margin-top: 11px;
     font-size: 20px;
 }
+
+.main{
+    background-color: #AACE9B;
+    display: inline-block;
+    margin-left: 20.1%;
+    margin-top: -720px;
+    padding-left: 10px;
+    width: 73.4%;
+}
+.welcome{
+    background-color: blue;
+}
+.welcome-title{
+    background-color: rgb(7, 194, 7);
+    font-size: 70px;
+    width: 30%;
+    font-weight: bold;
+    
+}
+
+.welcome-subtitle{
+    background-color: rgb(14, 134, 155);
+    font-size: 30px;
+    width: 30%;
+    margin-top: 40px;
+    
+}
+
+.welcome-p{
+    background-color: rgb(115, 65, 161);
+    font-size: 30px;
+    width: 42%;
+    margin-top: 70px;
+}
+
+.welcome-img{
+    position: absolute;
+    margin-left: 40%;
+    display: inline-block;
+    width: 365px;
+    height: 277;
+    margin-top: -375px;
+}
+.welcome-buttom{
+    height: 60px;
+    width: 150px;
+    margin-top: 70px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.actions{
+    background-color: rgb(42, 94, 94);
+
+}
+.actions-title{
+    font-size: 70px;
+    background-color: #329109;
+    margin-left: 9%;
+    margin-right: 1%;
+    border-bottom: solid 5px #AACE9B;
+}
+.hours{
+    background-color: rgb(221, 136, 31);
+    display: inline-block;
+    width: 35%;
+    margin-left: 125px;
+    
+
+}
+.hours-img{
+    background-color: blue;
+    display: inline-block;
+    
+    
+   
+}
+.hours-title{
+    background-color: #b81cb8;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+    
+    
+    
+}
+
+.hours-p{
+    background-color: rgb(19, 72, 117);
+    display: inline-block;
+    position: absolute;
+    margin-top: 60px;
+    width: 250px;
+    font-size: 30px;
+  
+    
+}
+.reports{
+    background-color: rgb(221, 136, 31);
+    display: inline-block;
+    width: 35%;
+    margin-left: 100px;
+}
+.reports-img{
+    background-color: blue;
+    display: inline-block;
+}
+.reports-title{
+    background-color: #b81cb8;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+}
+.reports-p{
+    background-color: rgb(19, 72, 117);
+    display: inline-block;
+    position: absolute;
+    margin-top: 60px;
+    width: 250px;
+    font-size: 30px;
+}
+.resources{
+    background-color: rgb(221, 136, 31);
+    display: inline-block;
+    width: 35%;
+    margin-left: 125px;
+}
+.resources-img{
+    background-color: blue;
+    display: inline-block;
+}
+.resources-title{
+    background-color: #b81cb8;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+}
+.resources-p{
+    background-color: rgb(19, 72, 117);
+    display: inline-block;
+    position: absolute;
+    margin-top: 60px;
+    width: 250px;
+    font-size: 30px;
+}
+.roles{
+    background-color: rgb(221, 136, 31);
+    display: inline-block;
+    width: 35%;
+    margin-left: 100px;
+}
+.roles-img{
+    background-color: blue;
+    display: inline-block;
+}
+.roles-title{
+    background-color: #b81cb8;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+}
+.roles-p{
+    background-color: rgb(19, 72, 117);
+    display: inline-block;
+    position: absolute;
+    margin-top: 60px;
+    width: 250px;
+    font-size: 30px;
+}
+
+.use{
+    background-color: #b81cb8;
+    margin-top: 100px;
+    padding-left: 9%;
+
+}
+.use-title{
+    font-size: 70px;
+    background-color: #329109;
+    margin-right: 1%;
+    border-bottom: solid 5px #AACE9B;
+}
+.use-li{
+    font-size: 30px;
+    padding-top: 20px;
+}
