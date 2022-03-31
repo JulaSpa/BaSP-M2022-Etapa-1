@@ -1,0 +1,186 @@
+.header {
+    background-color: aqua;
+    display: inline-block;
+    width: 80%;
+    margin-left: 20%;
+    
+}
+.icon {
+    background-color: bisque;
+    display: inline-block;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.icon-img {
+    height: 59px;
+    width: 57px;
+    
+}
+.title {
+    background-color: brown;
+    display: inline-block;
+    width: 80%;
+    border-bottom: solid 2px #AACE9B;
+    font-size: 45px;
+    margin-left: 12%;
+    padding-left: 5px;
+    margin-top: 4%;
+    height: 60px;
+   
+}
+
+.nav {
+    background-color: blueviolet;
+    display: inline-block;
+    width: 20%;
+    margin-top: -125px;
+    height: 88%;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.search {
+    background-color: #AACE9B;
+    padding-left: 30px;
+    padding-top: 30px;
+    height: 70px;
+}
+
+.search-input {
+    border-radius: 3px;
+    height: 30px;
+    padding-left: 25px;
+}
+
+.search-img{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+.menu{
+    background-color: aqua;
+    padding-left: 30px;
+}
+.menu-title {
+    font-size: 38px;
+    background-color: aquamarine;
+    width: 30%;
+    border-bottom: solid 3px black;
+}
+.menu-ol{
+    background-color: blue;
+    margin-top: 30px;
+    
+}
+.ol-home{
+    background-color: red;
+    font-size: 24px;
+    padding-top: 10px;
+    width: 90%;
+    border-bottom: solid 1px black;
+    padding-bottom: 5px;
+}
+.ol-signu{
+    background-color: red;
+    font-size: 24px;
+    padding-top: 10px;
+    width: 90%;
+    border-bottom: solid 1px black;
+    padding-bottom: 5px;
+}
+.ol-signi{
+    background-color: red;
+    font-size: 24px;
+    padding-top: 10px;
+    width: 90%;
+    padding-bottom: 5px;
+    height: 80px;
+    border-bottom: solid 1px black;
+}
+
+.touch{
+    background-color: #AACE9B;
+    padding-left: 30px;
+}
+
+.touch-title{
+    background-color: rgb(179, 82, 141);
+    font-size: 38px;
+    width: 65%;
+    border-bottom: solid 3px black;
+}
+.touch-p{
+    background-color: azure;
+    margin-top: 24px;
+    width: 90%;
+    font-size: 20px;
+}
+
+.contact{
+    background-color: brown;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+.email{
+    background-color: yellow;
+    height: 50px;
+    padding-left: 5px;
+    margin-top: 10px;
+    border-bottom: solid 1px black;
+}
+.email-img{
+    display: inline-block;
+    background-color: blue;
+    width: 55px;
+    height: 45px;
+    position: absolute;
+}.email-p{
+    display: inline-block;
+    background-color: blue;
+    margin-left: 60px;
+    margin-top: 11px;
+    font-size: 20px;
+}
+.home{
+    background-color: yellow;
+    height: 60px;
+    padding-left: 5px;
+    margin-top: 10px;
+    border-bottom: solid 1px black;
+}
+.home-img{
+    display: inline-block;
+    background-color: blue;
+    width: 55px;
+    height: 45px;
+    position: absolute;
+}.home-p{
+    display: inline-block;
+    background-color: blue;
+    margin-left: 60px;
+    margin-top: 11px;
+    font-size: 20px;
+}
+.phone{
+    background-color: yellow;
+    height: 50px;
+    padding-left: 5px;
+    margin-top: 10px;
+    border-bottom: solid 1px black;
+}
+.phone-img{
+    display: inline-block;
+    background-color: blue;
+    width: 55px;
+    height: 45px;
+    position: absolute;
+}.phone-p{
+    display: inline-block;
+    background-color: blue;
+    margin-left: 60px;
+    margin-top: 11px;
+    font-size: 20px;
+}
