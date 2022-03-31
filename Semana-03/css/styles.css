@@ -491,3 +491,71 @@
     font-size: 20px;
     border-style: none;
 }
+
+.history{
+    background-color: #160b7c;
+    border-radius: 50%;
+    height: 800px;
+}
+.history-up {
+    display: block;
+}
+.history-1{
+    background-color: #329109;
+    display: inline-block;
+    width: 400px;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+.history-title-1{
+    background-color: #11a6b1;
+    font-size: 30px;
+    width: 200px;
+    text-align: right;
+}
+.history-p-1{
+    background-color: red;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.history-objective{
+    display: inline-block;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 80px;
+    height: 250px;
+    width: 250px;
+}
+.history-down{
+    display: block;
+}
+.history-imgs{
+    display: inline-block;
+    background-color: pink;
+    width: 400px;
+    margin-top: 20%;
+    margin-left: 20%;
+    
+}
+.imgs-data{
+    height: 100px;
+    width: 100px;
+    margin-left: 30%;
+}
+.imgs-time{
+    height: 100px;
+    width: 100px;
+    margin-left: 10%;
+}
+
+.history-2{
+    background-color: #aeca0c;
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    margin-left: 4%;
+   margin-top: 300px;
+}
+.history-p-2{
+    background-color: red;
+}
