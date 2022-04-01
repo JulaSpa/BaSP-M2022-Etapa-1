@@ -1,12 +1,10 @@
 .header {
-    background-color: aqua;
     display: inline-block;
-    width: 80%;
+    width: 79%;
     margin-left: 20%;
     
 }
 .icon {
-    background-color: bisque;
     display: inline-block;
     position: absolute;
     margin-left: 1%;
@@ -18,7 +16,6 @@
     
 }
 .title {
-    background-color: brown;
     display: inline-block;
     width: 80%;
     border-bottom: solid 2px #AACE9B;
@@ -31,7 +28,6 @@
 }
 
 .nav {
-    background-color: blueviolet;
     display: inline-block;
     width: 20%;
     margin-top: -125px;
@@ -40,7 +36,6 @@
     border-bottom: solid 2px black;
 }
 .search {
-    background-color: #AACE9B;
     padding-left: 30px;
     padding-top: 30px;
     height: 70px;
@@ -61,22 +56,18 @@
 }
 
 .menu{
-    background-color: aqua;
     padding-left: 30px;
 }
 .menu-title {
     font-size: 38px;
-    background-color: aquamarine;
     width: 30%;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #AACE9B;
 }
 .menu-ol{
-    background-color: blue;
     margin-top: 30px;
     
 }
 .ol-home{
-    background-color: red;
     font-size: 24px;
     padding-top: 10px;
     width: 90%;
@@ -84,7 +75,6 @@
     padding-bottom: 5px;
 }
 .ol-signu{
-    background-color: red;
     font-size: 24px;
     padding-top: 10px;
     width: 90%;
@@ -92,7 +82,6 @@
     padding-bottom: 5px;
 }
 .ol-signi{
-    background-color: red;
     font-size: 24px;
     padding-top: 10px;
     width: 90%;
@@ -102,30 +91,25 @@
 }
 
 .touch{
-    background-color: #AACE9B;
     padding-left: 30px;
 }
 
 .touch-title{
-    background-color: rgb(179, 82, 141);
     font-size: 38px;
     width: 65%;
-    border-bottom: solid 3px black;
+    border-bottom: solid 3px #AACE9B;
 }
 .touch-p{
-    background-color: azure;
     margin-top: 24px;
     width: 90%;
     font-size: 20px;
 }
 
 .contact{
-    background-color: brown;
     padding-left: 30px;
     margin-top: 50px;
 }
 .email{
-    background-color: yellow;
     height: 50px;
     padding-left: 5px;
     margin-top: 10px;
@@ -133,19 +117,16 @@
 }
 .email-img{
     display: inline-block;
-    background-color: blue;
     width: 55px;
     height: 45px;
     position: absolute;
 }.email-p{
     display: inline-block;
-    background-color: blue;
     margin-left: 60px;
     margin-top: 11px;
     font-size: 20px;
 }
 .home{
-    background-color: yellow;
     height: 60px;
     padding-left: 5px;
     margin-top: 10px;
@@ -153,19 +134,16 @@
 }
 .home-img{
     display: inline-block;
-    background-color: blue;
     width: 55px;
     height: 45px;
     position: absolute;
 }.home-p{
     display: inline-block;
-    background-color: blue;
     margin-left: 60px;
     margin-top: 11px;
     font-size: 20px;
 }
 .phone{
-    background-color: yellow;
     height: 50px;
     padding-left: 5px;
     margin-top: 10px;
@@ -173,31 +151,32 @@
 }
 .phone-img{
     display: inline-block;
-    background-color: blue;
     width: 55px;
     height: 45px;
     position: absolute;
 }.phone-p{
     display: inline-block;
-    background-color: blue;
+   
     margin-left: 60px;
     margin-top: 11px;
     font-size: 20px;
 }
 
 .main{
-    background-color: #AACE9B;
+
     display: inline-block;
-    margin-left: 20.1%;
-    margin-top: -720px;
+    margin-top: 10px;
+    position: absolute;
     padding-left: 10px;
-    width: 73.4%;
+    width: 79%;
+    height: 57.5%;
+    overflow: auto;
+   
+    
+    
 }
-.welcome{
-    background-color: blue;
-}
+
 .welcome-title{
-    background-color: rgb(7, 194, 7);
     font-size: 70px;
     width: 30%;
     font-weight: bold;
@@ -205,7 +184,6 @@
 }
 
 .welcome-subtitle{
-    background-color: rgb(14, 134, 155);
     font-size: 30px;
     width: 30%;
     margin-top: 40px;
@@ -213,19 +191,24 @@
 }
 
 .welcome-p{
-    background-color: rgb(115, 65, 161);
     font-size: 30px;
     width: 42%;
     margin-top: 70px;
 }
 
 .welcome-img{
-    position: absolute;
-    margin-left: 40%;
-    display: inline-block;
+   
+    float: right;
     width: 365px;
     height: 277;
-    margin-top: -375px;
+    margin-top: -400px;
+    
+}
+.img-welcome{
+    margin-left: 50%;
+    display: inline-block;
+    
+
 }
 .welcome-buttom{
     height: 60px;
@@ -233,144 +216,156 @@
     margin-top: 70px;
     border-radius: 5px;
     font-size: 20px;
+    display: block;
 }
 
-.actions{
-    background-color: rgb(42, 94, 94);
 
-}
 .actions-title{
     font-size: 70px;
-    background-color: #329109;
     margin-left: 9%;
     margin-right: 1%;
     border-bottom: solid 5px #AACE9B;
+    margin-top: 10px;
+    
 }
 .hours{
-    background-color: rgb(221, 136, 31);
     display: inline-block;
     width: 35%;
-    margin-left: 125px;
+    margin-left: 10px;
+    margin-top: 10px;
     
 
 }
 .hours-img{
-    background-color: blue;
     display: inline-block;
     
     
    
 }
 .hours-title{
-    background-color: #b81cb8;
     font-size: 30px;
     font-weight: bold;
+    float: right;
+    margin-top: -180px;
+    
+     
+}
+.hours-title-box{
     display: inline-block;
-    position: absolute;
-    margin-top: 20px;
-    
-    
     
 }
 
+
 .hours-p{
-    background-color: rgb(19, 72, 117);
-    display: inline-block;
-    position: absolute;
-    margin-top: 60px;
+    float: right;
+    margin-top: -150px;
     width: 250px;
     font-size: 30px;
+    margin-left: 202px;
   
     
 }
+.hours-p-box{
+    display: inline-block;
+    
+}
+
 .reports{
-    background-color: rgb(221, 136, 31);
     display: inline-block;
     width: 35%;
     margin-left: 100px;
+    margin-top: 10px;
+    
 }
 .reports-img{
-    background-color: blue;
+    display: inline-block;
+}
+.reports-title-box{
     display: inline-block;
 }
 .reports-title{
-    background-color: #b81cb8;
     font-size: 30px;
     font-weight: bold;
-    display: inline-block;
-    position: absolute;
     margin-top: 20px;
+    float: right;
+    margin-top: -180px;
+}
+.reports-p-box{
+    display: inline-block;
 }
 .reports-p{
-    background-color: rgb(19, 72, 117);
-    display: inline-block;
-    position: absolute;
     margin-top: 60px;
     width: 250px;
     font-size: 30px;
+    float: right;
+    margin-left: 202px;
+    margin-top: -150px;
 }
 .resources{
-    background-color: rgb(221, 136, 31);
     display: inline-block;
     width: 35%;
-    margin-left: 125px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 .resources-img{
-    background-color: blue;
+    display: inline-block;
+}
+.resources-title-box{
     display: inline-block;
 }
 .resources-title{
-    background-color: #b81cb8;
     font-size: 30px;
     font-weight: bold;
+    float: right;
+    margin-top: -180px;
+}
+.resources-p-box{
     display: inline-block;
-    position: absolute;
-    margin-top: 20px;
 }
 .resources-p{
-    background-color: rgb(19, 72, 117);
-    display: inline-block;
-    position: absolute;
-    margin-top: 60px;
-    width: 250px;
+    float: right;
     font-size: 30px;
+    margin-left: 202px;
+    margin-top: -140px;
 }
 .roles{
-    background-color: rgb(221, 136, 31);
     display: inline-block;
     width: 35%;
     margin-left: 100px;
+    margin-top: 10px;
+    
 }
 .roles-img{
-    background-color: blue;
+    display: inline-block;
+}
+.roles-title-box{
     display: inline-block;
 }
 .roles-title{
-    background-color: #b81cb8;
     font-size: 30px;
     font-weight: bold;
+    float: right;
+    margin-top: -180px;
+    
+}
+.roles-p-box{
     display: inline-block;
-    position: absolute;
-    margin-top: 20px;
 }
 .roles-p{
-    background-color: rgb(19, 72, 117);
-    display: inline-block;
-    position: absolute;
-    margin-top: 60px;
+    float: right;
     width: 250px;
     font-size: 30px;
+    margin-left: 202px;
+    margin-top: -140px;
 }
 
 .use{
-    background-color: #b81cb8;
     margin-top: 100px;
     padding-left: 9%;
 
 }
 .use-title{
     font-size: 70px;
-    background-color: #329109;
     margin-right: 1%;
     border-bottom: solid 5px #AACE9B;
 }
@@ -379,21 +374,14 @@
     padding-top: 20px;
 }
 
-.form {
-    background-color: rgb(189, 218, 243);
-}
 .form-title{
     font-size: 70px;
-    background-color: #329109;
     margin-left: 9%;
     margin-right: 1%;
     border-bottom: solid 5px #AACE9B;
 }
-.form-form{
-    background-color: #b81cb8;
-}
+
 .form-bussines{
-    background-color: rgb(110, 10, 10);
     display: inline-block;
     margin-left: 15%;
     width: 400px;
@@ -410,7 +398,6 @@
 }
 
 .form-email{
-    background-color: rgb(110, 10, 10);
     display: inline-block;
     margin-left: 15%;
     width: 400px;
@@ -426,7 +413,6 @@
 }
 
 .checkbox{
-    background-color: #aeca0c;
     display: inline-block;
     margin-left: 15%;
     margin-top: 20px;
@@ -451,12 +437,10 @@
 }
 
 .phone-main{
-    background-color: rgb(110, 10, 10);
     display: inline-block;
-    margin-left: 24.1%;
+    margin-left: 33%;
     width: 400px;
     margin-top: 50px;
-    position: absolute;
     height: 65px;
 }
 .phone-label{
@@ -468,7 +452,6 @@
     height: 30px;
 }
 .message{
-    background-color: #b93007;
     margin-left: 15%;
     margin-top: 20px;
     width: 72.5%;
@@ -493,35 +476,31 @@
 }
 
 .history{
-    background-color: #160b7c;
     border-radius: 50%;
+    background-color: #AACE9B;
     height: 800px;
 }
 .history-up {
     display: block;
 }
 .history-1{
-    background-color: #329109;
     display: inline-block;
     width: 400px;
     margin-left: 20%;
     margin-top: 10%;
 }
 .history-title-1{
-    background-color: #11a6b1;
     font-size: 30px;
     width: 200px;
     text-align: right;
 }
 .history-p-1{
-    background-color: red;
     font-size: 15px;
     margin-top: 20px;
 }
 .history-objective{
     display: inline-block;
-    position: absolute;
-    margin-top: 140px;
+    margin-top: 100px;
     margin-left: 80px;
     height: 250px;
     width: 250px;
@@ -531,10 +510,9 @@
 }
 .history-imgs{
     display: inline-block;
-    background-color: pink;
     width: 400px;
-    margin-top: 20%;
     margin-left: 20%;
+    margin-top: 10%;
     
 }
 .imgs-data{
@@ -549,13 +527,99 @@
 }
 
 .history-2{
-    background-color: #aeca0c;
     display: inline-block;
-    position: absolute;
     width: 300px;
-    margin-left: 4%;
-   margin-top: 300px;
+    margin-left: 5.5%;
 }
 .history-p-2{
-    background-color: red;
+}
+
+.us{
+    margin-top: 40px;
+    
+}
+
+.us-1{
+    display: inline-block;
+    width: 300px;
+    margin-left: 10px;
+    height: 170px;
+}
+.us-2{
+    display: inline-block;
+    width: 300px;
+    margin-left: 150px;
+    height: 170px;
+    
+}
+.us-3{
+    display: inline-block;
+    width: 300px;
+    margin-left: 150px;
+    height: 170px;
+}
+
+.us-products{
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+    padding-bottom: 10px;
+    border-bottom: solid 5px #AACE9B;
+}
+.us-business{
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+    padding-bottom: 10px;
+    border-bottom: solid 5px #AACE9B;
+}
+.us-support{
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+    padding-bottom: 10px;
+    border-bottom: solid 5px #AACE9B;
+}
+
+.us-product-li{
+    margin-top: 10px;
+    margin-left: 20px
+}
+.us-bussines-li{
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+.us-support-li{
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+
+.footer{
+    display: inline-block;
+    width: 79%;
+    margin-left: 1px;
+    position: absolute;
+    margin-top: 600px;
+    border-top: solid 2px #AACE9B;
+  
+    
+}
+
+.footer-p{
+    text-align: center;
+    font-size: 30px;
+}
+.footer-icons{
+    text-align: center;
+
+}
+.icons{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.footer-copyright{
+    text-align: center;
+    margin-top: 10px;
 }
