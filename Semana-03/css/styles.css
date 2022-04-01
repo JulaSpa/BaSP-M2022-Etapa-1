@@ -177,10 +177,10 @@
 .main{
 
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 25px;
     position: absolute;
-    padding-left: 10px;
-    width: 79%;
+    padding-left: 175px;
+    width: 71%;
     height: 57.5%;
     overflow: auto;
    
@@ -239,10 +239,9 @@
 .actions-title{
     font-size: 70px;
     font-family: 'Roboto', sans-serif;
-    margin-left: 9%;
     margin-right: 1%;
     border-bottom: solid 5px #AACE9B;
-    margin-top: 10px;
+    margin-top: 100px;
     
 }
 .hours{
@@ -270,6 +269,7 @@
 }
 .hours-title-box{
     display: inline-block;
+
     
 }
 
@@ -386,7 +386,6 @@
 
 .use{
     margin-top: 100px;
-    padding-left: 9%;
 
 }
 .use-title{
@@ -404,14 +403,17 @@
 .form-title{
     font-size: 70px;
     font-family: 'Roboto', sans-serif;
-    margin-left: 9%;
     margin-right: 1%;
     border-bottom: solid 5px #AACE9B;
+    margin-top: 100px;
+}
+.form-form{
+    width: 65%;
+    
 }
 
 .form-bussines{
     display: inline-block;
-    margin-left: 15%;
     width: 400px;
     margin-top: 50px;
 
@@ -428,7 +430,6 @@
 
 .form-email{
     display: inline-block;
-    margin-left: 15%;
     width: 400px;
     margin-top: 50px;
 }
@@ -444,7 +445,6 @@
 
 .checkbox{
     display: inline-block;
-    margin-left: 15%;
     margin-top: 20px;
 }
 .checkbox-title{
@@ -469,10 +469,10 @@
 
 .phone-main{
     display: inline-block;
-    margin-left: 33%;
     width: 400px;
     margin-top: 50px;
     height: 65px;
+    margin-left: 232px;
 }
 .phone-label{
     display: block;
@@ -484,7 +484,6 @@
     height: 30px;
 }
 .message{
-    margin-left: 15%;
     margin-top: 20px;
     width: 72.5%;
 }
@@ -502,7 +501,7 @@
     background-color: #AACE9B;
     height: 40px;
     width: 200px;
-    margin-left: 73%;
+    margin-left: 50%;
     margin-top: 20px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
@@ -513,6 +512,7 @@
     border-radius: 50%;
     background-color: #AACE9B;
     height: 800px;
+    margin-top: 100px;
 }
 .history-up {
     display: block;
@@ -639,7 +639,7 @@
     width: 79%;
     margin-left: 1px;
     position: absolute;
-    margin-top: 600px;
+    margin-top: 675px;
     border-top: solid 2px #AACE9B;
   
     
@@ -649,6 +649,7 @@
     text-align: center;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    margin-top: 25px;
 }
 .footer-icons{
     text-align: center;
