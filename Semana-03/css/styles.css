@@ -187,6 +187,9 @@
     
     
 }
+::-webkit-scrollbar{
+    border-style: none;
+}
 
 .welcome-title{
     font-size: 70px;
