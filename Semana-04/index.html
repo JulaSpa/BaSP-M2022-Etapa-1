@@ -1,12 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="julianspataro@hotmail.com">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <title>Landing page</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="icon">
+                <img src="icons/open-bar.png" class="icon-img" alt="open bar icon">
+            </div>
+            <div class="title">
+                <h1>Trackgenix SA</h1>
+            </div>
+        </header>
+        <sidebar class="nav">
+            <div class="search">
+                    <img src="icons/search-icon.png" class="search-img" alt="search icon">
+                    <input type="search" placeholder="Search" class="search-input">
+            </div>
+            <div class="menu">
+                <p class="menu-title">Menu</p>
+                <ol class="menu-ol">
+                    <li class="ol-home">Home</li>
+                    <li class="ol-signu">Sign up</li>
+                    <li class="ol-signi">Log in</li>
+                </ol>
+            </div>
+            <div class="touch">
+                <h2 class="touch-title">Get in touch</h2>
+                <p class="touch-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sed iusto itaque illum aspernatur optio voluptatem deleniti nostrum, magnam animi. ipsum dolor sit, amet consectetur adipisicing elit. Vitae aspernatur nesciunt laboriosam illo reprehenderit hic adipisci maiores quo beatae ex!</p>
+            </div>
+            <div class="contact">
+                <div class="email">
+                    <img src="icons/email.png" class="email-img" alt="email-img">
+                    <p class="email-p">information@trackgenix.tld</p>
+                </div>
+                <div class="home">
+                    <img src="icons/home.png" class="home-img" alt="home img">
+                    <p class="home-p">1234 Somewhere Road #8254 Nashville. TN 0000-0000</p>
+                </div>
+                <div class="phone">
+                    <img src="icons/phone.png" class="phone-img" alt="phone img">
+                    <p class="phone-p">(000) 0000-0000</p>
+                </div>
+            </div>
+        </sidebar>
+        <main class="main">
+            <section class="welcome">
+                <div class="text">
+                    <h2 class="welcome-title">Welcome to Trackgenix!</h2>
+                    <h3 class="welcome-subtitle">A free website for everyone at Trackgenix!</h3>
+                    <p class="welcome-p">Here, you can register the hours worked in any project for all employees, generate reports and much more.</p>
+                    <button class="welcome-buttom">Learn more</button>
+                </div>
+                <div class="img-welcome">
+                    <img src="icons/logo.png" class="welcome-img" alt="logo of Trackgenix">
+                </div>
+                
+            </section>
+            <section class="actions">
+                <h2 class="actions-title">What can you do</h2>
+                <div class="boxes">
+                    <div class="hours">
+                        <img src="icons/hours.png" class="hours-img" alt="hours img">
+                        <div class="hours-text">
+                            <div class="hours-title-box">
+                                <h3 class="hours-title">Record hours</h3>
+                            </div>
+                            <div class="hours-p-box">
+                                <p class="hours-p">Create, modify, and delete projects and assign them to any employee/s.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="reports">
+                        <img src="icons/reports.png" class="reports-img" alt="reports img">
+                        <div class="reports-text">
+                            <div class="reports-title-box">
+                                <h3 class="reports-title">Generate reports</h3>
+                            </div>
+                             <div class="reports-p-box">
+                                <p class="reports-p">Emit repots to have a better view and understanding of all the projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="resources">
+                         <img src="icons/resources.png" class="resources-img" alt="resources img">
+                         <div class="resources-text">
+                            <div class="resources-title-box">
+                                <h3 class="resources-title">Manage resources</h3>
+                            </div>
+                            <div class="resources-p-box">
+                            <p class="resources-p">You will be able to see all the information you need to organize hours of work in the best way possible.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roles">
+                        <img src="icons/roles.png" class="roles-img" alt="roles img">
+                        <div class="roles-text">
+                            <div class="roles-title-box">
+                                <h3 class="roles-title">Designate roles</h3>
+                            </div>
+                    
+                            <div class="roles-p-box">
+                                <p class="roles-p">Establish wich employee may have the title of "project manager".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                </section>
+            <section class="use">
+                <h2 class="use-title">Why use trackgenix?</h2>
+                    <ol class="use-ol">
+                        <li class="use-li">Increase your productivity</li>
+                        <li class="use-li">Track your work</li>
+                        <li class="use-li">Leadership and team managment</li>
+                        <li class="use-li">Company decisions</li>
+                    </ol>
+            </section>
+            <section class="form">
+                <h2 class="form-title">Contact form</h2>
+                    <form class="form-form">
+                        <div class="form-bussines">
+                            <label class="form-label-bussines">Bussines name</label>
+                            <input type="text" class="form-input-bussines">
+                        </div>
+                        <div class="form-email">
+                            <label class="form-label-email">Email</label>
+                            <input type="email" class="form-input-email">
+                        </div>
+                        <div class="checkbox">
+                            <h2 class="checkbox-title">Contact area</h2>
+                            <div class="checkbox-resources">
+                                <input type="checkbox">
+                                <label>Resources</label>
+                            </div>
+                            <div class="checkbox-commer">
+                                <input type="checkbox">
+                                <label>Commercialization</label>
+                            </div>
+                            <div class="checkbox-system">
+                                <input type="checkbox">
+                                <label>Systems</label>
+                             </div>
+                        </div>
+                        <div class="phone-main">
+                            <label class="phone-label">Phone number</label>
+                            <input type="text" class="phone-text">
+                        </div>
+                        <div class="message">
+                            <label class="message-label">Message</label>
+                            <input type="text" class="message-text">
+                        </div>
+                        <input type="submit" value="Send" class="buttom-send">
+                    </form>
+                
+        
+            </section>
+            <section class="history">
+                <div class="history-up">
+                    <div class="history-1">
+                        <h2 class="history-title-1">Trackgenix history</h2>
+                        <p class="history-p-1">Trackgenix was founded on April 1, 2014, by college dropouts James Bond and Steve Pitt,
+                        who brought to the new company a vision of changing the way people viewed computers.
+                        </p>
+                    </div>
+                    <div class="history-imgs">
+                        <img src="./icons/data-security.png" class="imgs-data" alt="data img">
+                        <img src="./icons/effective-time.png" class="imgs-time" alt="clock img">
+                    </div>
+                    
+                </div>
+        
+                <div class="history-2">
+                    <img src="./icons/objetive.png" class="history-objective" alt="objectives img">
+                    <p class="history-p-2">Objective: Providing the right solutions and getting products into customers' 
+                hands with the support of store team members. 
+                    </p>
+                </div>
+                
+            </section>
+            <section class="us">
+                <div class="us-1">
+                    <h2 class="us-products">Products</h2>
+                        <ol>
+                            <li class="us-product-li">1. Funcionalities</li>
+                            <li class="us-product-li">2. Downloads</li>
+                            <li class="us-product-li">3. Integrations</li>
+                            <li class="us-product-li">4. Extras</li>
+                        </ol>
+                </div>
+                <div class="us-2">
+                    <h2 class="us-business">Business</h2>
+                        <ol>
+                            <li class="us-bussines-li">1. About us</li>
+                            <li class="us-bussines-li">2. Clients</li>
+                            <li class="us-bussines-li">3. Resources</li>
+                            <li class="us-bussines-li">4. Blog</li>
+                        </ol>
+                </div>
+                <div class="us-3">
+                    <h2 class="us-support">Support</h2>
+                        <ol>
+                            <li class="us-support-li">1. Help</li>
+                            <li class="us-support-li">2. Tutorials</li>
+                            <li class="us-support-li">3. Api</li>
+                            <li class="us-support-li">4. Contact</li>
+                        </ol>
+                    </div>
+            </section>
+    </main>
+        <footer class="footer">
+            <p class="footer-p">Rosario, Argentina</p>
+            <div class="footer-icons">
+                <img src="icons/lin.png" class="icons" alt="linkedin img">
+                <img src="icons/insta.png" class="icons" alt="instagram img">
+                <img src="icons/fb.png" class="icons" alt="facebook img">
+                <img src="icons/twitter.png" class="icons" alt="twitter img">
+            </div>
+            <p class="footer-copyright">Copyright &copy; 2022 Radium Rocket. All rights reserved.</p>
+        </footer>
     
-</body>
+    </body>
 </html>
