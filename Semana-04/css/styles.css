@@ -3,11 +3,12 @@
 }
 
 .header{
-   background-color: white;
     width: 100%;
     display: flex;
     position: fixed;
     height: 50px;
+    background-color: white;
+    
     
 }
 
@@ -37,15 +38,27 @@
 .welcome{
     margin-left: 2%;
     display: flex;
-    flex-grow: 1;
+    
     
    
 }
+.img-welcome{
+    width: 50%;
+    display: flex;
+    justify-content:center;
+}
+.welcome-img{
+    width: 90%;
+    height: 90%;
+
+}
+
 .text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     font-family: 'Roboto', sans-serif;
+    width: 50%;
+    
 }
 .welcome-title {
     font-weight: bold;
@@ -60,6 +73,7 @@
 }
 .welcome-buttom {
     width: 100px;
+    margin-top: 15px;
 
 }
 
@@ -154,7 +168,7 @@
 .resources-img{
     margin-top: 5%;
     width: 30%;
-    height: 50%;
+    height: 80%;
    
 }
 .resources-text{
@@ -183,7 +197,7 @@
 .roles-img{
     margin-top: 5%;
     width: 30%;
-    height: 50%;
+    height: 80%;
 }
 .roles-title{
     font-weight: bold;
@@ -200,7 +214,6 @@
 .use-title{
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
-    
     margin-left: 5%;
     margin-top: 5%;
     padding-bottom: 2%;
@@ -238,8 +251,7 @@
     display: flex;
     flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
-
-    width: 400px;
+    width: 350px;
 }
 
 .form-bussines{
@@ -270,7 +282,7 @@
    
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    margin-left: 20px;
   
    
 }
@@ -278,13 +290,14 @@
 .checkbox{
     width: 160px;
     margin-top: 5%;
+    
 }
 .phone-main{
    
     display: flex;
     flex-direction: column;
     width: 150px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 5%;
 }
 
@@ -421,7 +434,7 @@
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin-top: 2%;
     
 }
@@ -448,3 +461,247 @@
     justify-content: center;
     margin-top: 2%;
 }
+
+@media only screen and (min-width: 992px) {
+    .header{
+        
+        width: 75%;
+        margin-left: 25%;
+        font-size: 38px;
+        height: 100px;
+    }
+   
+    .main{
+        width: 75%;
+        margin-left: 25%;
+        padding-top: 100px;
+        
+        
+    }
+    .welcome{
+        font-size: 25px;
+    }
+    .text{
+        margin-top: 60px;
+    }
+
+    .actions-title{
+        font-size: 38px;
+    }
+
+    .hours{
+        font-size: 20px;
+    }
+    .reports{
+        font-size: 20px;
+    }
+    .resources{
+        font-size: 20px;
+    }
+    .roles{
+        font-size: 20px;
+    }
+    .use-title{
+        font-size: 38px;
+    }
+    .use-li{
+        font-size: 20px;
+    }
+
+    
+    .form-title{
+        font-size: 38px;
+    }
+    .form-form{
+        font-size: 20px;
+        width: 450px;
+    }
+   .checkbox{
+    width: 200px;
+    margin-top: 5%;
+    
+    }
+    .form-email{
+   
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+      
+       
+    }
+    
+    .history-title-1{
+        font-size: 30px;
+    }
+    .history-p-1{
+        font-size: 15px;
+    }
+    .history-p-2{
+        font-size: 15px;
+    }
+
+
+
+    .us-products{
+        font-size: 30px;
+    }
+    .us-product-li{
+        font-size: 15px;
+    }
+    .us-business{
+        font-size: 30px;
+    }
+    .usbusiness-li{
+        font-size: 15px;
+    }
+    .us-support{
+        font-size: 30px;
+    }
+    .ussupport-li{
+        font-size: 15px;
+    }
+
+
+    .footer{
+        width: 75%;
+        margin-left: 25%;
+        font-size: 15px;
+    }
+    .icons{
+        height: 2%;
+        width: 2%;
+        margin-right: 1%;
+    }
+    .footer-copyright{
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+    }
+    .nav{
+        display: flex !important;
+        flex-direction: column;
+        z-index: 2;
+        position: fixed;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+        width: 25%;
+        border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    height: 100%;
+       
+        
+    }
+    .search {
+        padding-left: 30px;
+        padding-top: 30px;
+        height: 70px;
+    }
+    
+    .search-input {
+        border-radius: 3px;
+        height: 30px;
+        padding-left: 25px;
+    }
+    
+    .search-img{
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 5px;
+    }
+
+    .menu{
+        padding-left: 30px;
+    }
+    .menu-title {
+        font-size: 38px;
+        font-family: 'Roboto', sans-serif;
+        width: 30%;
+        border-bottom: solid 3px #AACE9B;
+    }
+    .menu-ol{
+        margin-top: 30px;
+        
+    }
+    .ol-home{
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 10px;
+        width: 90%;
+        border-bottom: solid 1px black;
+        padding-bottom: 5px;
+    }
+    .ol-signu{
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 10px;
+        width: 90%;
+        border-bottom: solid 1px black;
+        padding-bottom: 5px;
+    }
+    .ol-signi{
+        font-size: 24px;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 10px;
+        width: 90%;
+        padding-bottom: 5px;
+        height: 80px;
+        border-bottom: solid 1px black;
+    }
+    .touch{
+        padding-left: 30px;
+    }
+    
+    .touch-title{
+        font-size: 38px;
+        font-family: 'Roboto', sans-serif;
+        width: 65%;
+        border-bottom: solid 3px #AACE9B;
+    }
+    .touch-p{
+        margin-top: 24px;
+        width: 90%;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .contact{
+        padding-left: 30px;
+        margin-top: 50px;
+        
+        
+    }
+    
+    .email{
+        display: flex;
+       
+        
+    }
+    .email-p{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .home{
+        display: flex;
+        margin-top: 10px;
+        
+        
+    }
+    .home-p{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .phone{
+        display: flex;
+        margin-top: 10px;
+    }
+    .phone-p{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+  }
