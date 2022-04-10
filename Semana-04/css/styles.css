@@ -475,6 +475,7 @@ main {
         width: 75%;
         margin-left: 25%;
         padding-top: 150px;
+      
         
         
     }
@@ -550,7 +551,9 @@ main {
     }
 
 
-
+    .us{
+        padding-bottom: 150px;
+    }
     .us-products{
         font-size: 30px;
     }
@@ -560,13 +563,13 @@ main {
     .us-business{
         font-size: 30px;
     }
-    .usbusiness-li{
+    .us-bussines-li{
         font-size: 15px;
     }
     .us-support{
         font-size: 30px;
     }
-    .ussupport-li{
+    .us-support-li{
         font-size: 15px;
     }
 
