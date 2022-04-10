@@ -2,7 +2,7 @@
     display: none;
 }
 
-.header{
+header{
     width: 100%;
     display: flex;
     position: fixed;
@@ -29,7 +29,7 @@
     font-weight: bold;
     
 }
-.main {
+main {
  
     width: 100%;
     padding-top: 80px;
@@ -463,7 +463,7 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .header{
+    header{
         
         width: 75%;
         margin-left: 25%;
@@ -471,10 +471,10 @@
         height: 100px;
     }
    
-    .main{
+    main{
         width: 75%;
         margin-left: 25%;
-        padding-top: 100px;
+        padding-top: 150px;
         
         
     }
@@ -566,6 +566,9 @@
         width: 75%;
         margin-left: 25%;
         font-size: 15px;
+        position: fixed;
+        bottom: 0;
+        
     }
     .icons{
         height: 2%;
