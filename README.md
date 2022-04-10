@@ -8,4 +8,4 @@ In this week I done the html structure of the project.
 In this week I done the styles of the web page, for see this you have to download the zip file.
  
 # Semana 04
-In this week I adapted the page for mobile devices.
+In this week I adapted the page for mobile devices. You can see this in GitHub pages.
