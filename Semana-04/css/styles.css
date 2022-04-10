@@ -488,6 +488,15 @@ main {
     .actions-title{
         font-size: 38px;
     }
+    .welcome-subtitle{
+        margin-top: 80px;
+    }
+    .welcome-p{
+        margin-top: 80px;
+    }
+    .welcome-buttom{
+        margin-top: 80px;
+    }
 
     .hours{
         font-size: 20px;
@@ -670,7 +679,7 @@ main {
     }
     .contact{
         padding-left: 30px;
-        margin-top: 50px;
+        margin-top: 20px;
         
         
     }
@@ -688,7 +697,7 @@ main {
 
     .home{
         display: flex;
-        margin-top: 10px;
+        
         
         
     }
@@ -700,7 +709,7 @@ main {
 
     .phone{
         display: flex;
-        margin-top: 10px;
+      
     }
     .phone-p{
         display: flex;
