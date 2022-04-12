@@ -757,12 +757,14 @@ main {
     }
     .form-input-bussines{
         width: 50%;
+        max-width: 200px;
         height: 20px;
         border-radius: 5%;
        
     }
     .form-input-email{
         width: 50%;
+        max-width: 200px;
         height: 20px;
         border-radius: 5%;
        
@@ -785,10 +787,12 @@ main {
     }
     .phone-main{
         width: 50%;
+       
     }
     .phone-text{
         width: 50%;
         height: 20px;
+        max-width: 200px;
     }
     .form-email{
    
@@ -801,8 +805,14 @@ main {
     .message-text{
         height: 100px;
         width: 75%;
+        max-width: 595px;
         border-radius: 2%;
+        margin-left: 0;
     }
+    .message-label{
+        margin-left: 0;
+    }
+  
     
 
     .history{
