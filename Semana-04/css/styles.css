@@ -964,17 +964,17 @@ main {
         background-color: rgb(255, 255, 255);
         width: 25%;
         border-right: solid 2px black;
-    border-bottom: solid 2px black;
-    height: 100%;
+        border-bottom: solid 2px black;
+        height: 100%;
+       
        
         
     }
     .search {
         padding-left: 5%;
-        padding-top: 30px;
-       width: 70%;
-        height: 70px;
-        
+        width: 70%;
+        flex: 0.4;
+        padding-top: 5%;
     }
     
     .search-input {
@@ -995,13 +995,14 @@ main {
 
     .menu{
         padding-left: 5%;
+        flex: 1;
     }
     .menu-title {
         font-size: 30px;
         font-family: 'Roboto', sans-serif;
         display: inline-block;  
         border-bottom: solid 3px #AACE9B;
-        margin-top: 5%;
+        
     }
     .menu-ol{
         margin-top: 20px;
@@ -1033,6 +1034,7 @@ main {
     }
     .touch{
         padding-left: 5%;
+        flex: 1;
     }
     
     .touch-title{
@@ -1051,7 +1053,7 @@ main {
     .contact{
         padding-left: 5%;
         margin-top: 20px;
-        
+        flex: 1;
         font-size: 10px;
         
     }
@@ -1127,4 +1129,5 @@ main {
         font-size: 12px;
         
     }
+   
   }
