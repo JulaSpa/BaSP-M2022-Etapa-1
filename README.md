@@ -9,3 +9,6 @@ In this week I done the styles of the web page, for see this you have to downloa
  
 # Semana 04
 In this week I adapted the page for mobile devices. You can see this in GitHub pages.
+
+# Semana 05
+In this week I did the javascript exercises.
