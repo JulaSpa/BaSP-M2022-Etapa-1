@@ -132,6 +132,7 @@ main {
     margin-top: 5%;
     align-items: center;
     width: 95%;
+    
 }
 
 
@@ -672,7 +673,6 @@ main {
     }
     .hours{
         font-size: 15px;
-  
         display: flex;
     }
     .hours-img{
@@ -890,6 +890,7 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        
     }
     .us-1{
         width: 30%;
