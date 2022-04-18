@@ -1,6 +1,5 @@
 @media only screen and (min-width: 600px) {
-    header{
-        
+    header{   
         width: 75%;
         margin-left: 25%;
         font-size: 38px;
@@ -8,19 +7,13 @@
         background-color: white;
         border-bottom: none;
     }
-    
     .icon-img {
         height: 70%;
-        width: 70%;
-     
-    
-       
+        width: 70%;    
     }
-    .title{
-      
+    .title{      
         display: flex;
-        justify-content:flex-start;
-     
+        justify-content:flex-start;     
         flex-grow: 1;
         width: 100%;
         padding-bottom: 10px;
@@ -30,54 +23,36 @@
         font-size: 30px;
         margin-right: 10%;
         margin-left: 5%;
-        border-bottom: solid 2px #AACE9B;
-        
+        border-bottom: solid 2px #AACE9B;        
     }
     main{
         width: 75%;
         margin-left: 25%;
-        padding-top: 150px;
-      
-        
-        
+        padding-top: 150px;                      
     }
     .welcome{
-        font-size: 25px;
-    
+        font-size: 25px;    
     }
     .welcome-title{
-
         width: 70%;
         text-align: start;
         color: black;
-        font-size: 30px;
-  
-        
-      
-    }
-    
-    .text{
-    
-    margin-top: 5%;
-    font-size: 15px;
-   
-    }
-    
-   
-    .welcome-img{
-    
+        font-size: 30px;                
+    }    
+    .welcome-text{    
+        margin-top: 5%;
+        font-size: 15px;   
+    }       
+    .welcome-img{    
         height: 100%;
         width: 90%;
-     }
-    
+     }    
     .welcome-subtitle{
         display: block;
-        margin-top: 0%;
-       
+        margin-top: 0%;       
     }
     .welcome-p{
-        display: block;
-   
+        display: block;   
     }
     .welcome-buttom{
         display: block;
@@ -86,15 +61,12 @@
         font-size: 15px;
         width: 125px;
         height: 40px;
-        border-radius: 5%;
-       
-    }
-    
+        border-radius: 5%;       
+    }    
     .actions-title{
         font-size: 30px;
     }
-    .boxes {
-   
+    .boxes {   
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -102,71 +74,31 @@
         align-items: center;
         width: 95%;
     }
-    .hours{
+    .boxes-child{
         font-size: 15px;
         display: flex;
     }
     .hours-img{
         margin-left: 0;
-       height: 50%;
+        height: 50%;
     }
-   
-    .hours-title{
-        justify-content:flex-start;
-    }
-    .reports{
-        font-size: 15px;
-       
-        display: flex;
-    }
-    .reports-img{
+    .boxes-img{
         margin-left: 0;
         height: 50%;
     }
-    .reports-title-box{
+    .title-box{
         justify-content:flex-start;
     }
-    .resources{
-        font-size: 15px;
-      
-        display: flex;
-    }
-    .resources-img{ 
-        margin-left: 0;
-        height: 50%;
-      
-    }
-    .resources-title{
-        justify-content:flex-start;
-    }
-    .roles{
-        font-size: 15px;
-       
-        display: flex;
-    }
-    .roles-img{
-        margin-left: 0;
-        height: 50%;
-    }
-    .roles-title{
-        justify-content:flex-start;
-    }
-
-
-
     .use-title{
         font-size: 30px;
     }
     .use-li{
         font-size: 15px;
-       margin-top: 2%;
-    }
-
-    
+        margin-top: 2%;
+    }    
     .form-title{
         font-size: 30px;
-        margin-top: 10%;
-       
+        margin-top: 10%;      
     }
     .form-form{
         font-size: 15px;
@@ -178,9 +110,7 @@
     }
     .form-bussines{
         width:50%;
-        display: flex;
-     
-        
+        display: flex;             
     }
     
     .form-email{
@@ -191,22 +121,17 @@
         width: 50%;
         max-width: 200px;
         height: 20px;
-        border-radius: 5%;
-       
+        border-radius: 5%;      
     }
     .form-input-email{
         width: 50%;
         max-width: 200px;
         height: 20px;
-        border-radius: 5%;
-       
+        border-radius: 5%;      
     }
-
-
    .checkbox{
-    width: 49%;
-   margin-left: 1%;
-    
+        width: 49%;
+        margin-left: 1%;
     }
     .checkbox-resources{
         margin-top: 1%;
@@ -218,21 +143,16 @@
         margin-top: 1%;
     }
     .phone-main{
-        width: 50%;
-       
+        width: 50%;  
     }
     .phone-text{
         width: 50%;
         height: 20px;
         max-width: 200px;
     }
-    .form-email{
-   
+    .form-email{   
         display: flex;
-        flex-direction: column;
-      
-      
-       
+        flex-direction: column;                   
     }
     .message-text{
         height: 100px;
@@ -243,45 +163,27 @@
     }
     .message-label{
         margin-left: 0;
-    }
-  
-    
-
-    .history{
-    
+    }      
+    .history{    
         display: flex;
         flex-wrap: wrap;
         font-family: 'Roboto', sans-serif;
         justify-content: center;
         width: 90%;
-        margin-left: 5%;
-     
-    
-       
-        
-        
-    }
-    
+        margin-left: 5%;                                
+    }    
     .history-up{
-        flex: 0.8;
-  
-       
+        flex: 0.8;         
     }
-    .history-2{
-        
-        flex: 0.8;
-        
+    .history-2{        
+        flex: 0.8;        
     }
-    .history-title-1{
-    
+    .history-title-1{    
         font-size: 20px;
         margin-left: 0%;
         margin-top: 5%;
         padding-bottom: 2%;
-        margin-right: 5%;
-        
-        
-        
+        margin-right: 5%;                        
     }
     .history-p-1{
         font-size: 15px;
@@ -290,19 +192,13 @@
         width: 100%;
         padding-bottom: 2%;
         margin-right: 5%;
-    }
-    
-    
-    
-    
+    }                
     .history-title-2{
         font-size: 20px;
         margin-left: 5%;
         margin-top: 5%;
         padding-bottom: 2%;
-        margin-right: 5%;
-      
-    
+        margin-right: 5%;          
     }
     .history-p-2{
         font-size: 15px;
@@ -310,23 +206,16 @@
         margin-top: 5%;
         width: 100%;
         padding-bottom: 2%;
-        margin-right: 5%;
-       
-    }
-    
-
-
+        margin-right: 5%;      
+    }    
     .us{
         padding-bottom: 150px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        
+        justify-content: space-between;       
     }
     .us-1{
-        width: 30%;
-      
-       
+        width: 30%;             
     }
     .us-2{
         width: 30%;
@@ -358,29 +247,21 @@
         font-size: 10px;
         margin-left: 35%;
     }
-
-
     .footer{
         width: 75%;
         margin-left: 25%;
         font-size: 15px;
         position: fixed;
-        bottom: 0;
-      
-        
-        
+        bottom: 0;                      
     }
     .icons{
         height: 2%;
         width: 2%;
         margin-top: 2%;
         margin-right: 1%;
-    }
-  
+    }  
     .footer-icons{
-        margin-top: 0;
-      
-       
+        margin-top: 0;             
     }
     .footer-copyright{
         display: flex;
@@ -397,26 +278,21 @@
         width: 25%;
         border-right: solid 2px black;
         border-bottom: solid 2px black;
-        height: 100%;
-       
-       
-        
+        height: 100%;                      
     }
     .search {
         padding-left: 5%;
         width: 70%;
         flex: 0.4;
         padding-top: 5%;
-    }
-    
+    }   
     .search-input {
         border-radius: 3px;
         height: 30px;
         width: 100%;
         max-width: 150px;
         padding-left: 20px;
-    }
-    
+    }    
     .search-img{
         height: 20px;
         width: 20px;
@@ -424,7 +300,6 @@
         margin-top: 6px;
         margin-left: 5px;
     }
-
     .menu{
         padding-left: 5%;
         flex: 1;
@@ -433,12 +308,10 @@
         font-size: 30px;
         font-family: 'Roboto', sans-serif;
         display: inline-block;  
-        border-bottom: solid 3px #AACE9B;
-        
+        border-bottom: solid 3px #AACE9B;       
     }
     .menu-ol{
-        margin-top: 20px;
-        
+        margin-top: 20px;       
     }
     .ol-home{
         font-size: 20px;
@@ -467,8 +340,7 @@
     .touch{
         padding-left: 5%;
         flex: 1;
-    }
-    
+    } 
     .touch-title{
         font-size: 30px;
         font-family: 'Roboto', sans-serif;
@@ -486,43 +358,30 @@
         padding-left: 5%;
         margin-top: 20px;
         flex: 1;
-        font-size: 10px;
-        
-    }
-    
+        font-size: 10px;        
+    }    
     .email{
-        display: flex;
-    
-       
-        
+        display: flex;                   
     }
     .email-p{
         display: flex;
         align-items: center;
         margin-left: 1%;
     }
-
     .home{
-        display: flex;
-        
-        
-        
+        display: flex;                        
     }
     .home-p{
         display: flex;
         align-items: center;
         margin-left: 1%;
     }
-
     .phone{
-        display: flex;
-      
+        display: flex;      
     }
     .phone-p{
         display: flex;
         align-items: center;
         margin-left: 1%;
-    }
-
-    
+    }    
   }

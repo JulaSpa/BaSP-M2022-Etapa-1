@@ -1,7 +1,6 @@
 .nav{
     display: none;
 }
-
 header{
     width: 100%;
     display: flex;
@@ -9,24 +8,18 @@ header{
     height: 50px;
     background-color: rgba(237, 237, 237, 1);
     border-bottom: solid 2px #AACE9B;
-    
 }
 .icon{
-   
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 .icon-img {
     height: 90%;
     width: 90%;
-   margin-left: 10%;
-
-   
+   margin-left: 10%;   
 }
 .title{
-  
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -37,52 +30,32 @@ header{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
-
-    
 }
 main {
- 
     width: 100%;
     padding-top: 80px;
 }
-
 .welcome{
-    margin-left: 2%;
- 
-
-    
-   
+    margin-left: 2%;  
 }
 .img-welcome{
     flex: 1;
     display: flex;
     justify-content: center;
     margin-left: 10%;
-    
-    
- 
 }
-.welcome-img{
-    
+.welcome-img{  
    height: 100%;
-    
-
 }
 .text-img{
     display: flex;
-    width: 100%;
- 
-   
-    
+    width: 100%;   
 }
-.text {
-   
+.welcome-text {   
     font-family: 'Roboto', sans-serif;
     flex: 1;
     display: flex;
-    flex-direction: column;
-   
-    
+    flex-direction: column;       
 }
 .welcome-title {
     width: 100%;
@@ -91,30 +64,23 @@ main {
     font-size: 150%;
     font-family: 'Roboto', sans-serif;
     color: rgba(55, 56, 103, 1);
-
 }
 .welcome-subtitle{
     margin-top: 5%;
     color: rgba(55, 56, 103, 1);
     font-size: 150%;
-    margin-top: 20%;
-    
+    margin-top: 20%;   
 }
 .welcome-p{
     margin-top: 5%;
     color: rgba(55, 56, 103, 1);
-    display: none;
-   
+    display: none;   
 }
 .welcome-buttom {
     width: 100px;
     margin-top: 15px;
     display: none;
-
 }
-
-
-
 .actions-title{
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
@@ -124,150 +90,49 @@ main {
     display: inline-block;
     border-bottom: solid 4px #AACE9B;
 }
-
-.boxes {
-   
+.boxes {  
     display: flex;
     flex-direction: column;
     margin-top: 5%;
     align-items: center;
-    width: 95%;
-    
+    width: 95%;   
 }
-
-
-.hours {
+.boxes-child {
     font-size: 13px;
     width: 45%;
     margin-left: 1%;
-    font-family: 'Roboto', sans-serif;
-  
-    
-    
-    
+    font-family: 'Roboto', sans-serif;              
 }
-.hours-text{
+.text{
     margin-left: 5%;
     display: flex;
     flex-direction: column;
     margin-top: 5%;
 }
-.hours-title{
+.p-box{
+    margin-top: 5%;
+}
+.boxes-img{
+    margin-top: 5%;
+    max-width: 50%;
+    height: auto;
+    margin-left: 30%;   
+}
+.title-box{
     font-weight: bold;
     display: flex;
     justify-content: center;
 }
-.hours-p-box{
-    margin-top: 5%;
-    margin-left: 5%;
-}
-.hours-img{
-    margin-top: 5%;
-    max-width: 50%;
-    height: auto;
-    margin-left: 30%;
-   
-}
-
-
-
-
-.reports{
-    font-size: 13px;
-    width: 45%;
-    margin-left: 1%;
-    font-family: 'Roboto', sans-serif;
-}
-.reports-text{
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-}
-
-
-.reports-img{
-    margin-top: 5%;
-    max-width: 50%;
-    height: auto;
-    margin-left: 30%;
-}
-.reports-title-box{
+.title-box h3{
     font-weight: bold;
     display: flex;
     justify-content: center;
-}
-.reports-p{
-    margin-top: 5%;
-}
-
-
-.resources{
-    
-    font-size: 13px;
-    width: 45%;
-    margin-left: 1%;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1%;
-    
-}
-
-.resources-img{
-    margin-top: 5%;
-    max-width: 50%;
-    height: auto;
-    margin-left: 30%;
-   
-}
-.resources-text{
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-}
-.resources-title{
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-}
-.resources-p{
-    margin-top: 5%;
-}
-
-
-.roles{
-    font-size: 13px;
-    width: 45%;
-    margin-left: 1%;   
-    font-family: 'Roboto', sans-serif;
-    margin-top: 1%;
-}
-.roles-text{
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-}
-.roles-img{
-    margin-top: 5%;
-    max-width: 50%;
-    height: auto;
-    margin-left: 30%;
 }
 .roles-title{
     font-weight: bold;
     display: flex;
     justify-content: center;
 }
-.roles-p{
-    margin-top: 5%;
-}
-
-
-
-
-
-
 .use-title{
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
@@ -275,7 +140,7 @@ main {
     margin-top: 5%;
     padding-bottom: 2%;
     margin-right: 5%;
-   display: inline-block;
+    display: inline-block;
     border-bottom: solid 4px #AACE9B;
 }
 .use-ol{
@@ -286,11 +151,8 @@ main {
     justify-content: space-between;
     height: 100px;
     margin-left: 5%;
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;   
 }
-
-
 .form-title{
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
@@ -301,9 +163,7 @@ main {
     display: inline-block;
     border-bottom: solid 4px #AACE9B;
 }
-
 .form-form{
-
     margin-left: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -320,36 +180,27 @@ main {
 .form-label-bussines{
     margin-left: 2%;
 }
-.form-bussines{
-   
+.form-bussines{   
     display: flex;
-    flex-direction: column;
-    
-  
-
+    flex-direction: column;      
 }
 .form-input-bussines{
    margin-left: 2%;
    margin-right: 10%;
 }
-
 .form-input-email{
     margin-left: 2%;
-    margin-right: 10%;
-    
+    margin-right: 10%;   
 }
 .form-label-email{
     margin-left: 2%;
 }
 .phone-text{
     margin-left: 2%;
-    margin-right: 10%;
-    
+    margin-right: 10%;    
 }
 .message-label{
-
     margin-left: 2%;
-
 }
 .message-text{
     margin-left: 2%;
@@ -357,22 +208,15 @@ main {
     height: 60px;
 }
 .form-email{
-    margin-top: 5%;
-    
+    margin-top: 5%;   
     display: flex;
-    flex-direction: column;
-   
-  
-   
+    flex-direction: column;        
 }
-
 .checkbox{
     width: 50%;
-    margin-top: 5%;
-    
+    margin-top: 5%;   
 }
-.phone-main{
-   
+.phone-main{   
     display: flex;
     flex-direction: column;
     margin-top: 5%;
@@ -380,49 +224,33 @@ main {
 .phone-label{
     margin-left: 2%;
 }
-
 .message{
-
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 5%;
 }
-
 .buttom-send{
     margin-left: 200px;
     width: 100px;
     margin-top: 5%;
-    display: none;
- 
+    display: none; 
 }
-
-.history{
-    
+.history{    
     display: flex;
     flex-wrap: wrap;
     font-family: 'Roboto', sans-serif;
-    justify-content: center;
-   
-    width: 85%;
- 
-
-   
-    
-    
+    justify-content: center;   
+    width: 85%;            
 }
-
-
 .history-title-1{
-
     font-size: 25px;
     margin-left: 5%;
     margin-top: 5%;
     padding-bottom: 2%;
     margin-right: 5%;
     display: inline-block;
-    border-bottom: solid 4px #AACE9B;
-    
+    border-bottom: solid 4px #AACE9B;   
 }
 .history-p-1{
     font-size: 20px;
@@ -432,7 +260,6 @@ main {
     padding-bottom: 2%;
     margin-right: 5%;
 }
-
 .imgs-data{
     height: 25%;
     width: 25%;
@@ -443,15 +270,12 @@ main {
     width: 25%;
     display: none;
 }
-
 .history-objective{
     height: 60%;
     width: 90%;
     display: none;
 }
-
-.history-2{
-    
+.history-2{    
     width: 100%;
 }
 .history-title-2{
@@ -462,7 +286,6 @@ main {
     margin-right: 5%;
     display: inline-block;
     border-bottom: solid 4px #AACE9B;
-
 }
 .history-p-2{
     font-size: 20px;
@@ -470,22 +293,15 @@ main {
     margin-top: 5%;
     width: 80%;
     padding-bottom: 2%;
-    margin-right: 5%;
-   
+    margin-right: 5%;   
 }
-
-.us{
-  
-    display: flex;
-  
+.us{  
+    display: flex;  
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     margin-top: 5%;
-    width: 90%;
-    
-  
+    width: 90%;      
 }
-
 .us-products{
     font-size: 25px;
     margin-left: 5%;
@@ -507,10 +323,8 @@ main {
     padding-bottom: 2%;
     margin-right: 5%;
     display: inline-block;
-    border-bottom: solid 4px #AACE9B;
-    
+    border-bottom: solid 4px #AACE9B;   
 }
-
 .us-bussines-li{
     margin-left: 5%;
     font-size: 20px;
@@ -524,15 +338,12 @@ main {
     margin-right: 5%;
     display: inline-block;
     border-bottom: solid 4px #AACE9B;
-
 }
-
 .us-support-li{
     margin-left: 5%;
     font-size: 20px;
     margin-top: 5%;
 }
-
 .footer{
     border-top: solid 2px #AACE9B;
     display: flex;
@@ -541,20 +352,16 @@ main {
     font-size: 12px;
     background-color: rgb(255, 255, 255);
     margin-top: 2%;
-    
 }
-
 .footer-p{
     display: flex;
     justify-content: center;
     margin-top: 2%;
 }
-
 .footer-icons{
     display: flex;
     justify-content: center;
     margin-top: 2%;
-
 }
 .icons{
     height: 5%;
