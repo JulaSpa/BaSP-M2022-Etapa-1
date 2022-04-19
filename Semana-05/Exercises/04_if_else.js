@@ -25,6 +25,6 @@ if (age<2){
     alert ("Exercise 04-B:" + "Adulto mayor")
 } else {
     alert ("Exercise 04-B:" + "Anciano")
-}
+} 
 
  

@@ -30,4 +30,4 @@ console.log("Exercise 02-E:" + res5)
 //Exercise "F"
 
 var text6 = "federico gonzalez"
-console.log("Exercise 02-F:" + text6[0].toUpperCase() + text6.substring(1, text6.indexOf(" ")) + " " + text6[text6.indexOf("gonzalez")].toUpperCase() + text6.substring(text6.indexOf("onzalez"))) 
+console.log("Exercise 02-F:" + text6[0].toUpperCase() + text6.substring(1, text6.indexOf(" ")) + " " + text6[text6.indexOf("gonzalez")].toUpperCase() + text6.substring(text6.indexOf("onzalez")))  

@@ -36,4 +36,4 @@ alert("Exercise 05-C:" + sentence)
 array3=[]
 for (array3=0; array3<10; array3++){
     console.log("Exercise 05-D:" + array3)
-} 
+}  

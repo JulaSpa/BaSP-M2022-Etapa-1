@@ -35,4 +35,4 @@ console.log("Exercise 03-F:" + array6.join('-'))
 //Exercise "G"
 
 var array7 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-console.log("Exercise 03-G:" + array7.slice(4, 11)) 
+console.log("Exercise 03-G:" + array7.slice(4, 11))  
