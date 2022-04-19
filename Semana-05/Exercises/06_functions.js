@@ -2,64 +2,50 @@
 
 function suma (num1, num2){
     var rta = num1 + num2
+    numberValidation(num1, num2)
+    integerNumber(num1, num2)
+    console.log("Exercise 06-A:" + rta)
     return rta
 }
-suma()
-
-var resultado = suma(5, 8)
-
-console.log(resultado)
+suma(2, 2)
 
 //Exercise "B"
 
-function suma2 (num1, num2){
-    
-    var rta = num1 + num2
-    return rta
-
-    
-   
-   
+function numberValidation(num1, num2){
+    if(isNaN(num1 && num2)){
+        alert("One parameter is not a number")
+        console.log("Exercise 06-B:" + NaN)
+    }else {
+        var rtaB = num1 + num2
+        console.log("Exercise 06-B:" + rtaB)
+    }
 }
-suma2()
-
-
-var resultado2 = suma2(5, 2.9)
-
-if(isNaN(resultado2)){
-    alert("One parameter is not a number")
-    resultado2 = NaN
-    console.log(resultado2)
-}else {
-    console.log(resultado2)
-}
-
 
 //Exercise "C"
 
 function validateInteger(num){
     if(Number.isInteger(num)){
-        return true
+        return console.log("Exersice 06-C:" + num)
+        
     } else {
-        return false
+        return console.log("Exersice 06-C: Is not an integer")
     }
 }
-
 var numberV = validateInteger(1.2);
-
-console.log(numberV)
 
 //Exercise "D"
 
-function integerNumber(int){
-    var int = resultado2
-    if (Number.isInteger(int)){
-        return console.log(int)
+function integerNumber(num1, num2){
+    if (Number.isInteger(num1 && num2)){
+        var rtaD = num1 + num2
+        return console.log("Exersice 06-D:" + rtaD)
     } else {
         alert("The number is not an integer, it will be converted")
-        console.log(Math.round(int))
+        var rta2D = Math.round(num1) + Math.round(num2)
+        return console.log("Exercise 06-D conv:" + rta2D)
+
     }
 }
 
-integerNumber()
+
 
