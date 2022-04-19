@@ -7,7 +7,7 @@ function suma (num1, num2){
     console.log("Exercise 06-A:" + rta)
     return rta
 }
-suma(2, 2)
+var value = suma(2, 2.8)
 
 //Exercise "B"
 
