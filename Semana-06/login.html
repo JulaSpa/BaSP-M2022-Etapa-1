@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Raleway:wght@100&display=swap" rel="stylesheet">
+   
+
+    <title>Document</title>
+</head>
+<body>
+    <section id="modal">
+        <img src="./icons/close.png" id="close">
+        <h2 id="modal-h2">Your Email and password:</h2>
+        <p id="modal-p">Errors in validation user</p>
+        <ul id="ul">
+
+        </ul>
+    </section>
+    <header>
+        <h1>Trackgenix SA</h1>
+       
+    </header>
+    <main>
+        
+        <section>
+            <h2>Sign in</h2>
+            <div class="form">
+                <h3 id="emailText">Email</h3>
+                <input type="email" id="inputEmail">
+                <h3 id="errorEmail">@,gmail,and .com is Requiere</h3>
+
+                <h3 id="passwordText">Password</h3>
+                <input type="password" id="inputPassword">
+                <h3 id="errorPassword">Only letters or numbers</h3>
+            </div>
+            <div class="check">
+                <div>
+                    <input type="checkbox">
+                    <label>Remember me</label>
+                </div>
+                <h3>Forgot password?</h3>
+            </div>
+            <button id="button">Continue</button>
+        </section>
+    </main>
+        <footer class="footer">
+            <p class="footer-p">Rosario, Argentina</p>
+            <div class="footer-icons">
+                <img src="icons/lin.png" class="icons" alt="linkedin img">
+                <img src="icons/insta.png" class="icons" alt="instagram img">
+                <img src="icons/fb.png" class="icons" alt="facebook img">
+                <img src="icons/twitter.png" class="icons" alt="twitter img">
+            </div>
+            <p class="footer-copyright">Copyright &copy; 2022 Radium Rocket. All rights reserved.</p>
+        </footer>
+    <script src="javascript/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+#modal{
+    width: 70%;
+    height: 50%;
+    position: fixed;
+    margin-left: 15%;
+    margin-top: 20%;
+    background-color: rgba(55, 56, 103, 1);
+    display: none;
+}
+#close{
+    margin-left: 80%;
+    height: 15%;
+    width: 15%;
+    border-radius: 1px;
+    margin-top: 5%;
+}
+header{
+    width: 100%;
+    background-color: rgba(164, 164, 164, 1);
+    display: flex;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 10%;
+    align-items: center;
+    padding-left: 2%;
+    
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+#nameInputReq{
+    display: none;
+}
+#lastNameInputReq{
+    display: none;
+}
+#dniReq{
+    display: none;
+}
+#phoneReq{
+    display: none;
+}
+#adressReq{
+    display: none;
+}
+#cityReq{
+    display: none;
+}
+#postalReq{
+    display: none;
+}
+#passwordReq{
+    display: none;
+}
+#passwordRepeatReq{
+    display: none;
+}
+.form{
+    margin-top: 10%;
+    align-self: center;
+    font-size: 12px;
+}
+button{
+    margin-top: 10%;
+    width: 150px;
+    height: 30px;
+    align-self: center;
+    background-color: #AACE9B;
+   
+}
+.footer{
+    border-top: solid 5px #AACE9B;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: rgba(55, 56, 103, 1);
+    width: 100%;
+    margin-top: 10%;
+}
+.footer-p{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.icons{
+    height: 5%;
+    width: 5%;
+    margin-right: 5%;
+}
+.footer-copyright{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
