@@ -201,17 +201,17 @@ function filterAdress(e){
     }
     if(letterSum>=4 && numSum>=1 && signsSum ==0){
         e.target.style.backgroundColor = "" 
-                adressInput.style.color = "black"
-                e.target.style.borderColor = "black"
-                adressReq.style.display="none"
-                adressReq.style.color="black"
-                filterAdressCondition = true;
+        adressInput.style.color = "black"
+        e.target.style.borderColor = "black"
+        adressReq.style.display="none"
+        adressReq.style.color="black"
+        filterAdressCondition = true;
     } else{
         adressInput.style.color = "red"
-                e.target.style.borderColor = "red"
-                adressReq.style.display="block"
-                adressReq.style.color="red"
-                filterAdressCondition = false;
+        e.target.style.borderColor = "red"
+        adressReq.style.display="block"
+        adressReq.style.color="red"
+        filterAdressCondition = false;
     }
 
 }
