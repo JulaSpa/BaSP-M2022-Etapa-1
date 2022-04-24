@@ -12,55 +12,52 @@ var inputPasswordRepeat = document.getElementById("inputPasswordRepeat")
 var buttonCreate = document.getElementById("button")
 var close = document.getElementById("close")
 
-nameInput.addEventListener("keyup",filter)
+
 nameInput.addEventListener("blur",filter)
-lastNameInput.addEventListener("keyup",filterLastname)
 lastNameInput.addEventListener("blur",filterLastname)
-dni.addEventListener("keyup",filterdni)
 dni.addEventListener("blur",filterdni)
-phoneInput.addEventListener("keyup",filterPhone)
 phoneInput.addEventListener("blur",filterPhone)
-adressInput.addEventListener("keyup",filterAdress)
 adressInput.addEventListener("blur",filterAdress)
-cityInput.addEventListener("keyup",filterCity)
 cityInput.addEventListener("blur",filterCity)
-postalInput.addEventListener("keyup",filterBlur)
 postalInput.addEventListener("blur",filterBlur)
-inputPassword.addEventListener("keyup",filterPass)
 inputPassword.addEventListener("blur",filterPass)
-inputPasswordRepeat.addEventListener("keyup",filterPassR)
 inputPasswordRepeat.addEventListener("blur",filterPassR)
 
-var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var nums = ["0","1","2","3","4","5","6","7","8","9"];
-var charsAndNums = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
+var signs = ["!","#","$","%","&","/","(",")","=","?","¡","¿","+","*","[","]","{","}","-","."];
 
 function filter(e){
     var name = e.target.value
     nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
     for(i=0;i<name.length;i++){
             var newName =name[i]
-            for(i=0;i<chars.length;i++){
-               const letter=chars[i]
-                if(letter.toLocaleLowerCase().indexOf(newName)!=-1 && nameInput.value.length>3){
-                    e.target.style.backgroundColor = "" 
-                    nameInput.style.color = "black"
-                    e.target.style.borderColor = "black"
-                    nameInputReq.style.display="none"
-                    nameInputReq.style.color="black"
-                    nameCondition = true;
-                    break
-                }else {
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
+            }
+    }
+    if(letterSum>=3 && numSum==0 && signsSum ==0){
+        e.target.style.backgroundColor = "" 
+        nameInput.style.color = "black"
+        e.target.style.borderColor = "black"
+        nameInputReq.style.display="none"
+        nameInputReq.style.color="black"
+        nameCondition = true;
+    } else{
                     nameInput.style.color = "red"
                     e.target.style.borderColor = "red"
                     nameInput.style.color="red"
                     nameInputReq.style.display="block"
                     nameInputReq.style.color="red"
                     nameCondition = false;
-                }
-            }
     }
-    
 
 }
 nameInput.addEventListener("focus", (e)=>{
@@ -73,32 +70,37 @@ nameInput.addEventListener("focus", (e)=>{
 
 function filterLastname(e){
     var name = e.target.value
-    console.log(name)
-    var lastNameInputReq=document.getElementById("lastNameInputReq")
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
     for(i=0;i<name.length;i++){
             var newName =name[i]
-            console.log(newName)
-            for(i=0;i<chars.length;i++){
-               const letter=chars[i]
-               console.log(letter)
-                if(letter.toLocaleLowerCase().indexOf(newName)!=-1 && lastNameInput.value.length>3){
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
+            }
+    }
+    if(letterSum>=3 && numSum==0 && signsSum ==0){
                     e.target.style.backgroundColor = "" 
                     lastNameInput.style.color = "black"
                     e.target.style.borderColor = "black"
                     lastNameInputReq.style.display="none"
                     lastNameInputReq.style.color="black"
                     lastNameCondition = true;
-                    break
-                }else {
-                    lastNameInput.style.color = "red"
-                    e.target.style.borderColor = "red"
-                    lastNameInputReq.style.display="block"
-                    lastNameInputReq.style.color="red"
-                    lastNameCondition = false;
-                    
-                }
-            }
+    } else{
+        lastNameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        lastNameInputReq.style.display="block"
+        lastNameInputReq.style.color="red"
+        lastNameCondition = false;
     }
+                   
+                 
+                
 }
 lastNameInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -108,30 +110,35 @@ lastNameInput.addEventListener("focus", (e)=>{
     lastNameInputReq.style.display="none"
 })  
 function filterdni(e){
-    var dniNums = e.target.value
-    console.log(dniNums)
-    var dniReq = document.getElementById("dniReq")
-    for(i=0;i<dniNums.length;i++){
-        var newDni =dniNums[i]
-        for(i=0;i<nums.length;i++){
-           const newNumbs=nums[i]
-            if(newNumbs.toLocaleLowerCase().indexOf(newDni)!=-1){
-                e.target.style.backgroundColor = "" 
-                dni.style.color = "black"
-                e.target.style.borderColor = "black"
-                dniReq.style.display="none"
-                dniReq.style.color="black"
-                dniCondition = true;
-                break
-            }else {
-                lastNameInput.style.color = "red"
-                e.target.style.borderColor = "red"
-                dniReq.style.display="block"
-                dniReq.style.color="red"
-                dniCondition = false;
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
             }
-        }
-}
+    }
+    if(letterSum==0 && numSum>=7 && signsSum ==0){
+        e.target.style.backgroundColor = "" 
+        dni.style.color = "black"
+        e.target.style.borderColor = "black"
+        dniReq.style.display="none"
+        dniReq.style.color="black"
+        dniCondition = true;
+    } else{
+        dni.style.color = "red"
+        e.target.style.borderColor = "red"
+        dniReq.style.display="block"
+        dniReq.style.color="red"
+        dniCondition = false;
+    }
 }
 dni.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -141,29 +148,36 @@ dni.addEventListener("focus", (e)=>{
     dniReq.style.display="none"
 })  
 function filterPhone(e){
-    var phoneNum = e.target.value
-    var phoneReq = document.getElementById("phoneReq") 
-    for(i=0;i<phoneNum.length;i++){
-        var newPhone =phoneNum[i]
-        for(i=0;i<nums.length;i++){
-           const newNum=nums[i]
-            if(newNum.toLocaleLowerCase().indexOf(newPhone)!=-1){
-                e.target.style.backgroundColor = "" 
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
+            }
+    }
+    if(letterSum==0 && numSum==10 && signsSum ==0){
+        e.target.style.backgroundColor = "" 
                 phoneInput.style.color = "black"
                 e.target.style.borderColor = "black"
                 phoneReq.style.display="none"
                 phoneReq.style.color="black"
                 filterPhoneCondition = true;
-                break
-            }else {
-                phoneInput.style.color = "red"
-                e.target.style.borderColor = "red"
-                phoneReq.style.display="block"
-                phoneReq.style.color="red"
-                filterPhoneCondition = false;
-            }
-        }
-}
+    } else{
+        phoneInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        phoneReq.style.display="block"
+        phoneReq.style.color="red"
+        filterPhoneCondition = false;
+    }
+                
 }
 phoneInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -175,29 +189,36 @@ phoneInput.addEventListener("focus", (e)=>{
 }) 
 
 function filterAdress(e){
-    var adressNum = e.target.value
-    var adressReq = document.getElementById("adressReq") 
-    for(i=0;i<adressNum.length;i++){
-        var newAdress =adressNum[i]
-        for(i=0;i<charsAndNums.length;i++){
-           const newNum=charsAndNums[i]  
-            if(newNum.toLocaleLowerCase().indexOf(newAdress)!=-1){
-                e.target.style.backgroundColor = "" 
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
+            }
+    }
+    if(letterSum>=4 && numSum>=1 && signsSum ==0){
+        e.target.style.backgroundColor = "" 
                 adressInput.style.color = "black"
                 e.target.style.borderColor = "black"
                 adressReq.style.display="none"
                 adressReq.style.color="black"
                 filterAdressCondition = true;
-                break
-            }else {
-                adressInput.style.color = "red"
+    } else{
+        adressInput.style.color = "red"
                 e.target.style.borderColor = "red"
                 adressReq.style.display="block"
                 adressReq.style.color="red"
                 filterAdressCondition = false;
-            }
-        }
-}
+    }
+
 }
 adressInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -208,30 +229,33 @@ adressInput.addEventListener("focus", (e)=>{
 }) 
 function filterCity(e){
     var name = e.target.value
-    console.log(name)
-    var cityReq=document.getElementById("cityReq")
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
     for(i=0;i<name.length;i++){
             var newName =name[i]
-            console.log(newName)
-            for(i=0;i<chars.length;i++){
-               const letter=chars[i]
-               console.log(letter)
-                if(letter.toLocaleLowerCase().indexOf(newName)!=-1 && cityInput.value.length>3){
-                    e.target.style.backgroundColor = "" 
-                    cityInput.style.color = "black"
-                    e.target.style.borderColor = "black"
-                    cityReq.style.display="none"
-                    cityReq.style.color="black"
-                    filterCityCondition = true;
-                    break
-                }else {
-                    cityInput.style.color = "red"
-                    e.target.style.borderColor = "red"
-                    cityReq.style.display="block"
-                    cityReq.style.color="red"
-                    filterCityCondition = false;
-                }
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
             }
+    }
+    if(letterSum>3 && numSum==0 && signsSum ==0){
+        e.target.style.backgroundColor = "" 
+        cityInput.style.color = "black"
+        e.target.style.borderColor = "black"
+        cityReq.style.display="none"
+        cityReq.style.color="black"
+        filterCityCondition = true;
+    } else{
+        cityInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        cityReq.style.display="block"
+        cityReq.style.color="red"
+        filterCityCondition = false;
     }
 }
 
@@ -243,29 +267,38 @@ cityInput.addEventListener("focus", (e)=>{
     cityReq.style.display="none"
 }) 
 function filterBlur(e){
-    var postalNum = e.target.value
-    var postalReq = document.getElementById("postalReq") 
-    for(i=0;i<postalNum.length;i++){
-        var newPostal =postalNum[i]  
-        for(i=0;i<nums.length;i++){
-           const newNum=nums[i]
-            if(newNum.toLocaleLowerCase().indexOf(newPostal)!=-1){
-                e.target.style.backgroundColor = "" 
-                postalInput.style.color = "black"
-                e.target.style.borderColor = "black"
-                postalReq.style.display="none"
-                postalReq.style.color="black"
-                postalCondition = true;
-                break
-            }else {
-                postalInput.style.color = "red"
-                e.target.style.borderColor = "red"
-                postalReq.style.display="block"
-                postalReq.style.color="red"
-                postalCondition = false;
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
             }
-        }  
-}}
+    }
+    if(letterSum==0 && numSum>=4 && numSum<=5  && signsSum ==0){
+        e.target.style.backgroundColor = "" 
+        postalInput.style.color = "black"
+        e.target.style.borderColor = "black"
+        postalReq.style.display="none"
+        postalReq.style.color="black"
+        postalCondition = true;
+    } else{
+        postalInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        postalReq.style.display="block"
+        postalReq.style.color="red"
+        postalCondition = false;
+    }
+                
+               
+}
  postalInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
     postalInput.style.color = "black"
@@ -298,29 +331,36 @@ inputEmail.addEventListener("focus", (e)=>{
     errorEmail.style.display="none"
 }) 
 function filterPass(e){
-    var adressNum = e.target.value  
-    var passwordReq = document.getElementById("passwordReq") 
-    for(i=0;i<adressNum.length;i++){
-        var newAdress =adressNum[i]
-        for(i=0;i<charsAndNums.length;i++){
-           const newNum=charsAndNums[i]
-            if(newNum.toLocaleLowerCase().indexOf(newAdress)!=-1){
-                e.target.style.backgroundColor = "" 
-                inputPassword.style.color = "black"
-                e.target.style.borderColor = "black"
-                passwordReq.style.display="none"
-                passwordReq.style.color="black"
-                filterPassCondition = true;
-                break
-            }else {
-                inputPassword.style.color = "red"
-                e.target.style.borderColor = "red"
-                passwordReq.style.display="block"
-                passwordReq.style.color="red"
-                filterPassCondition = false;
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
             }
-        }
-}
+    }
+    if(letterSum>=1 && numSum>=1 && signsSum ==0 && inputPassword.value.length>=8){
+        e.target.style.backgroundColor = "" 
+        inputPassword.style.color = "black"
+        e.target.style.borderColor = "black"
+        passwordReq.style.display="none"
+        passwordReq.style.color="black"
+        filterPassCondition = true;
+    } else{
+        inputPassword.style.color = "red"
+        e.target.style.borderColor = "red"
+        passwordReq.style.display="block"
+        passwordReq.style.color="red"
+        filterPassCondition = false;
+    }
+
 }
 inputPassword.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -329,30 +369,36 @@ inputPassword.addEventListener("focus", (e)=>{
     passwordReq.style.display="none"
 })
 function filterPassR(e){
-    var adressNum = e.target.value
-    var passwordRepeatReq = document.getElementById("passwordRepeatReq") 
-    for(i=0;i<adressNum.length;i++){
-        var newAdress =adressNum[i]
-        for(i=0;i<charsAndNums.length;i++){
-           const newNum=charsAndNums[i]
-            if(newNum.toLocaleLowerCase().indexOf(newAdress)!=-1){
-                e.target.style.backgroundColor = "" 
-                inputPasswordRepeat.style.color = "black"
-                e.target.style.borderColor = "black"
-                passwordRepeatReq.style.display="none"
-                passwordRepeatReq.style.color="black"
-                filterPassRCondition = true;
-                break
-            }else {
-                inputPasswordRepeat.style.color = "red"
-                e.target.style.borderColor = "red"
-                passwordRepeatReq.style.display="block"
-                passwordRepeatReq.style.color="red"
-                filterPassRCondition = false;
-                
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
             }
-        }
-}
+    }
+    if(letterSum>=1 && numSum>=1 && signsSum ==0 && inputPasswordRepeat.value.length>=8 && inputPasswordRepeat.value===inputPassword.value){
+        e.target.style.backgroundColor = "" 
+        inputPasswordRepeat.style.color = "black"
+        e.target.style.borderColor = "black"
+        passwordRepeatReq.style.display="none"
+        passwordRepeatReq.style.color="black"
+        filterPassRCondition = true;
+    } else{
+        inputPasswordRepeat.style.color = "red"
+        e.target.style.borderColor = "red"
+        passwordRepeatReq.style.display="block"
+        passwordRepeatReq.style.color="red"
+        filterPassRCondition = false;
+    }
+                
 }
 inputPasswordRepeat.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
