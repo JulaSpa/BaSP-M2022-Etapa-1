@@ -34,30 +34,41 @@ inputEmail.addEventListener("focus", (e)=>{
     inputEmail.style.color="black"
     errorEmail.style.display="none"
 }) 
-var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"];
+var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var nums = ["0","1","2","3","4","5","6","7","8","9"];
+var signs = ["!","#","$","%","&","/","(",")","=","?","¡","¿","+","*","[","]","{","}","-","."];
+
 inputPassword.addEventListener("keyup",filter)
 inputPassword.addEventListener("blur",filter)
 function filter(e){
-    var text = e.target.value
-    for(i=0;i<text.length;i++){
-        var pass= Array.from(text[i])
-         for(let i=0;i<chars.length;i++){
-            const letter=chars[i]
-            if(letter.toLocaleLowerCase().indexOf(pass)!=-1){
-                e.target.style.backgroundColor = "" 
-                passwordText.style.color = "black"
-                e.target.style.borderColor = "black"
-                inputPassword.style.color="black"
-                filterEmail = true;
-               break
-            } else{
-                passwordText.style.color = "red"
-                e.target.style.borderColor = "red"
-                inputPassword.style.color="red"
-                filterEmail=false;                
-            } 
-        } 
-    }    
+    var name = e.target.value
+    nameInputReq = document.getElementById("nameInputReq")
+    var letterSum = 0;
+    var numSum = 0;
+    var signsSum = 0;
+    for(i=0;i<name.length;i++){
+            var newName =name[i]
+            if(chars.indexOf(newName)!=-1){
+                letterSum++
+            } else if(nums.indexOf(newName)!=-1){
+                numSum++
+            } else if (signs.indexOf(newName)!=1){
+                signsSum ++
+            }
+    }
+    if(letterSum>=1 && numSum>=1 && signsSum ==0){
+        e.target.style.backgroundColor = "" 
+        passwordText.style.color = "black"
+        e.target.style.borderColor = "black"
+        inputPassword.style.color="black"
+        passwordValid = true;
+    } else{
+        passwordText.style.color = "red"
+        e.target.style.borderColor = "red"
+        inputPassword.style.color="red"
+        passwordValid=false;  
+    }
+                
 }
 inputPassword.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -70,7 +81,7 @@ button.addEventListener("click", value)
 function value(e, text,pass){
     e.preventDefault();
     modal.style.display="block"
-    if(inputEmail.value=="" || inputPassword.value=="" || inputEmail.value.includes(validE)==false || filterEmail==false){
+    if(inputEmail.value=="" || inputPassword.value=="" || inputEmail.value.includes(validE)==false || passwordValid==false){
         console.log("completaaaa")
         modalH.style.display="none"
         modalP.style.display="block"
