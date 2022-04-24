@@ -67,8 +67,7 @@ function filter(e){
         e.target.style.borderColor = "red"
         inputPassword.style.color="red"
         passwordValid=false;  
-    }
-                
+    }   
 }
 inputPassword.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 

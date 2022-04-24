@@ -97,10 +97,7 @@ function filterLastname(e){
         lastNameInputReq.style.display="block"
         lastNameInputReq.style.color="red"
         lastNameCondition = false;
-    }
-                   
-                 
-                
+    }    
 }
 lastNameInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -185,9 +182,7 @@ phoneInput.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     phoneInput.style.color="black"
     phoneReq.style.display="none"
-   
 }) 
-
 function filterAdress(e){
     var name = e.target.value
     nameInputReq = document.getElementById("nameInputReq")
@@ -397,8 +392,7 @@ function filterPassR(e){
         passwordRepeatReq.style.display="block"
         passwordRepeatReq.style.color="red"
         filterPassRCondition = false;
-    }
-                
+    }         
 }
 inputPasswordRepeat.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
