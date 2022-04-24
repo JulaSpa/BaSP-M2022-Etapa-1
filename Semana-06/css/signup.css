@@ -1,9 +1,8 @@
 #modal{
     width: 70%;
-    height: 50%;
     position: fixed;
     margin-left: 15%;
-    margin-top: 20%;
+    border-radius: 5px;
     background-color: rgba(55, 56, 103, 1);
     display: none;
 }
@@ -13,6 +12,21 @@
     width: 15%;
     border-radius: 1px;
     margin-top: 5%;
+}
+#modal-h2{
+    font-size: 20px;
+    color: white;
+    margin-left: 5%;
+}
+#modal-p{
+    font-size: 20px;
+    color: white;
+    margin-left: 5%;
+}
+#ul{
+    margin-top: 5%;
+    color: white;
+    margin-left: 5%;
 }
 header{
     width: 100%;

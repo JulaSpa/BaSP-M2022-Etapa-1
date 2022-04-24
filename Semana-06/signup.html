@@ -13,30 +13,30 @@
     <title>Document</title>
 </head>
 <body>
-    <section id="modal">
-        <img src="./icons/close.png" id="close">
-        <h2 id="modal-h2">Your Email and password:</h2>
-        <p id="modal-p">Errors in validation user</p>
-        <ul id="ul">
-
-        </ul>
-    </section>
+    
     <header>
         <h1>Trackgenix SA</h1>
        
     </header>
     <main>
-        
+        <section id="modal">
+            <img src="./icons/close.png" id="close">
+            <h2 id="modal-h2">Your data:</h2>
+            <h2 id="modal-p">Errors in validation user</h2>
+            <ul id="ul">
+    
+            </ul>
+        </section>
         <section>
             <h2>Sign Up</h2>
             <div class="form">
                 <h3 id="name">Name</h3>
                 <input type="text" id="nameInput">
-                <h3 id="nameInputReq">Name is requiere (only letters)</h3>
+                <h3 id="nameInputReq">Name is requiere (only letters and more than 3)</h3>
 
                 <h3 id="">LastName</h3>
                 <input type="text" id="lastNameInput">
-                <h3 id="lastNameInputReq">LastName is requiere (only letters)</h3>
+                <h3 id="lastNameInputReq">LastName is requiere (only letters and more than 3)</h3>
 
                 <h3 id="">DNI</h3>
                 <input type="text" id="dni">
@@ -67,11 +67,11 @@
                 <h3 id="errorEmail">Email is requiere</h3>
 
                 <h3 id="">Password</h3>
-                <input type="text" id="inputPassword">
+                <input type="password" id="inputPassword">
                 <h3 id="passwordReq">Password is requiere (more 9 letters)</h3>
 
                 <h3 id="">Repeat Password</h3>
-                <input type="text" id="inputPasswordRepeat">
+                <input type="password" id="inputPasswordRepeat">
                 <h3 id="passwordRepeatReq">Repeat password</h3>
             </div>
             <div class="check">

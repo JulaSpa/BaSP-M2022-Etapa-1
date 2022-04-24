@@ -3,7 +3,7 @@
     height: 50%;
     position: fixed;
     margin-left: 15%;
-    margin-top: 20%;
+    border-radius: 5px;
     background-color: rgba(55, 56, 103, 1);
     display: none;
 }
