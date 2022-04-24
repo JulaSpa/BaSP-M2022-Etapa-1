@@ -12,3 +12,6 @@ In this week I adapted the page for mobile devices. You can see this in GitHub p
 
 # Semana 05
 In this week I did the javascript exercises.
+
+# Semana 06
+In this week we have to do a validation form using javascript.
