@@ -61,6 +61,11 @@ section h2{
     color: red;
     margin-top: 1%;
 }
+#errorPasswordSign{
+    display: none;
+    color: red;
+    margin-top: 1%;
+}
 .check{
     display: flex;
     justify-content: space-around;

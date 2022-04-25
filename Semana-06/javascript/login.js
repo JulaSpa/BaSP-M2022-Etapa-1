@@ -4,6 +4,8 @@ var button = document.getElementById("button")
 var emailText = document.getElementById("emailText")
 var errorEmail= document.getElementById("errorEmail")
 var passwordText = document.getElementById("passwordText")
+var errorPassword = document.getElementById("errorPassword")
+var errorPasswordSign = document.getElementById("errorPasswordSign")
 var modal = document.getElementById("modal")
 var ul = document.getElementById("ul")
 var modalH = document.getElementById("modal-h2")
@@ -61,13 +63,22 @@ function filter(e){
         passwordText.style.color = "black"
         e.target.style.borderColor = "black"
         inputPassword.style.color="black"
+        errorPassword.style.display="none"
+        errorPasswordSign.style.display="none"
         passwordValid = true;
-    } else{
+    } else if(letterSum==0 || numSum==0 && signsSum ==0){
         passwordText.style.color = "red"
         e.target.style.borderColor = "red"
         inputPassword.style.color="red"
+        errorPassword.style.display="block"
         passwordValid=false;  
-    }   
+    }   else if(signsSum >=1){
+        passwordText.style.color = "red"
+        e.target.style.borderColor = "red"
+        inputPassword.style.color="red"
+        errorPasswordSign.style.display="block"
+        passwordValid=false; 
+    }
 }
 inputPassword.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -75,6 +86,7 @@ inputPassword.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     inputPassword.style.color="black"
     errorPassword.style.display="none"
+    errorPasswordSign.style.display="none"
 })  
 button.addEventListener("click", value)
 function value(e, text,pass){
