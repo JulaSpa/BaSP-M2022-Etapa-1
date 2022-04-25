@@ -160,7 +160,7 @@ function filterPhone(e){
                 signsSum ++
             }
     }
-    if(letterSum==0 && numSum==10 && signsSum ==0){
+    if(letterSum==0 && numSum>=10 && signsSum ==0){
         e.target.style.backgroundColor = "" 
                 phoneInput.style.color = "black"
                 e.target.style.borderColor = "black"
@@ -412,14 +412,23 @@ buttonCreate.addEventListener("click", (e)=>{
         modalP.style.display="none"
         modalH.style.display="block"
         var liName = document.createElement("li")
+        liName.classList.add("classList")
         var liLastName=document.createElement("li")
+        liLastName.classList.add("classList")
         var liDni=document.createElement("li")
+        liDni.classList.add("classList")
         var liEmail=document.createElement("li")
+        liEmail.classList.add("classList")
         var liPhone=document.createElement("li")
+        liPhone.classList.add("classList")
         var liAdress=document.createElement("li")
+        liAdress.classList.add("classList")
         var liCity=document.createElement("li")
+        liCity.classList.add("classList")
         var liPostal=document.createElement("li")
+        liPostal.classList.add("classList")
         var liPass=document.createElement("li")
+        liPass.classList.add("classList")
         liName.appendChild(document.createTextNode(`Name: ${nameInput.value}`))
         ul.appendChild(liName)
         liLastName.appendChild(document.createTextNode(`Last name: ${lastNameInput.value}`))

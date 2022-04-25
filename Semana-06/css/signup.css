@@ -12,6 +12,7 @@
     width: 25px;
     border-radius: 1px;
     margin-top: 5%;
+    cursor: pointer;
 }
 #modal-h2{
     font-size: 20px;
@@ -24,13 +25,28 @@
     margin-left: 5%;
 }
 #ul{
-    margin-top: 5%;
+    margin-top: 2%;
     color: white;
     margin-left: 5%;
 }
-.liForm{
-    margin-top: 5%;
+.classList{
+    margin-top: 2%
 }
+.liForm{
+    margin-top: 25%;
+}
+.form-li input {
+    margin-top: 2%;
+    height: 30%;
+}
+
+.req {
+    font-size: 8px;
+    max-width: 85%;
+    margin-top: 4%;
+}
+
+
 header{
     width: 100%;
     background-color: rgba(164, 164, 164, 1);
@@ -41,7 +57,6 @@ header{
     height: 10%;
     align-items: center;
     padding-left: 2%;
-    
 }
 section{
     display: flex;
@@ -90,6 +105,8 @@ button{
     height: 30px;
     align-self: center;
     background-color: #AACE9B;
+    cursor: pointer;
+    border-radius: 5px;
    
 }
 .footer{
@@ -101,6 +118,7 @@ button{
     background-color: rgba(55, 56, 103, 1);
     width: 100%;
     margin-top: 10%;
+    color: white;
 }
 .footer-p{
     display: flex;
@@ -131,6 +149,9 @@ button{
         display: flex;
         flex-wrap: wrap;
     }
+    .req {
+        font-size: 12px;
+    }
     .form-li{
         width: 35%;
         font-size: 15px;
@@ -140,7 +161,8 @@ button{
     .check{
         display: flex;
         width: 50%;
-        font-size: 15px;   
+        font-size: 15px;  
+        margin-left: 25%; 
     }
     .check h3{
         margin-left: 0px;
@@ -155,6 +177,7 @@ button{
         display: flex;
         flex-wrap: wrap;
         max-width: 800px;
+        margin-top: 2%;
     }
     .form-li{
         width: 20%;
@@ -166,6 +189,10 @@ button{
         width: 50%;
         font-size: 15px;   
         margin-left: 25%;
+        margin-top: 5%;
+    }
+    button{
+        margin-top: 5%;  
     }
     .footer{
        height: 20%;
