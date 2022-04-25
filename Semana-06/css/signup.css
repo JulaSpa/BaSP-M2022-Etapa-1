@@ -94,6 +94,9 @@ section{
 #passwordRepeatReq{
     display: none;
 }
+#dateReq{
+    display: none;
+}
 .form{
     margin-top: 10%;
     align-self: center;

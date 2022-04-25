@@ -7,6 +7,7 @@ var cityInput = document.getElementById("cityInput")
 var postalInput = document.getElementById("postalInput")
 var inputEmail = document.getElementById("inputEmail")
 var errorEmail = document.getElementById("errorEmail")
+var dateInput = document.getElementById("date")
 var inputPassword = document.getElementById("inputPassword")
 var inputPasswordRepeat = document.getElementById("inputPasswordRepeat")
 var buttonCreate = document.getElementById("button")
@@ -22,6 +23,7 @@ cityInput.addEventListener("blur",filterCity)
 postalInput.addEventListener("blur",filterBlur)
 inputPassword.addEventListener("blur",filterPass)
 inputPasswordRepeat.addEventListener("blur",filterPassR)
+dateInput.addEventListener("blur", filterDate)
 
 var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var nums = ["0","1","2","3","4","5","6","7","8","9"];
@@ -143,7 +145,26 @@ dni.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     dni.style.color="black"
     dniReq.style.display="none"
-})  
+}) 
+function filterDate(e){
+    date = e.target.value
+    year = date.substring (0,4)
+    month = date.substring (5,7)
+    day = date.substring(8,10)
+    if(day>31 || month>12 || year<1920 || year>2023){
+        dateInput.style.color = "red"
+        dateInput.style.borderColor = "red"
+        dateReq.style.display="block"
+        dateReq.style.color="red"
+        filterDateCondition = false;
+    }else {
+        dateInput.style.color = "black"
+        dateInput.style.borderColor = "black"
+        dateReq.style.display="none"
+        dateReq.style.color="black"
+        filterDateCondition = true;
+    }
+}
 function filterPhone(e){
     var name = e.target.value
     nameInputReq = document.getElementById("nameInputReq")
@@ -405,7 +426,7 @@ buttonCreate.addEventListener("click", (e)=>{
     var modalP = document.getElementById("modal-p")
     var modalH = document.getElementById("modal-h2")
     var modal = document.getElementById("modal")
-    if(inputEmail.value == "" || inputPasswordRepeat == "" || nameCondition==false || lastNameCondition == false || filterEmailCondition == false || dniCondition == false || filterPhoneCondition == false || filterAdressCondition == false || filterCityCondition == false || postalCondition == false || filterPassCondition == false || filterPassRCondition == false){
+    if(inputEmail.value == "" || inputPasswordRepeat == "" || nameCondition==false || lastNameCondition == false || filterEmailCondition == false || dniCondition == false || filterPhoneCondition == false || filterAdressCondition == false || filterCityCondition == false || postalCondition == false || filterPassCondition == false || filterPassRCondition == false || filterDateCondition==false){
         modalP.style.display="block"
         modalH.style.display="none"
     } else{
