@@ -6,6 +6,9 @@
     background-color: rgba(55, 56, 103, 1);
     display: none;
 }
+#modal li{
+    list-style: none;
+}
 #close{
     margin-left: 80%;
     height: 25px;
@@ -14,23 +17,21 @@
     margin-top: 5%;
     cursor: pointer;
 }
-#modal-h2{
+#modalh2{
     font-size: 20px;
     color: white;
     margin-left: 5%;
 }
-#modal-p{
-    font-size: 20px;
-    color: white;
-    margin-left: 5%;
-}
-#ul{
+#ul1,#ul2,#ul3,#ul4,#ul5,#ul6,#ul7,#ul8,#ul9,#ul10{
     margin-top: 2%;
     color: white;
     margin-left: 5%;
 }
-.classList{
-    margin-top: 2%
+#ul2{
+    padding-bottom: 0;
+}
+#ul10{
+    padding-bottom: 2%;
 }
 .liForm{
     margin-top: 25%;
@@ -132,6 +133,7 @@ button{
     display: flex;
     justify-content: center;
     margin-top: 2%;
+    margin-left: 6%;
 }
 .icons{
     height: 5%;
@@ -143,10 +145,6 @@ button{
     justify-content: center;
     margin-top: 5%;
 }
-.footer-icons{
-    margin-left: 6%;
-}
-
 @media only screen and (min-width: 600px) {
     .form{
         display: flex;
@@ -159,7 +157,15 @@ button{
         width: 35%;
         font-size: 15px;
         margin-left: 15%;
+        margin-top: 10%;
+        height: 100px;
+    }
+    .input{
+        width: 90%;
         
+    }
+    .liForm{
+        margin-top: 0PX;
     }
     .check{
         display: flex;
@@ -173,29 +179,54 @@ button{
     .footer{
         font-size: 15px;
     }
+    .footer-p{
+        margin-left: 5%;
+    }
+    .footer-icons{
+        margin-left: 10%;
+    }
+    .footer-copyright{
+        margin-left: 5%;
+    }
 
 }
 @media only screen and (min-width: 768px){
+    #modalh2{
+        font-size: 20px;
+        color: white;
+        margin-left: 5%;
+        text-align: start;
+    }
     .form{
         display: flex;
         flex-wrap: wrap;
-        max-width: 800px;
-        margin-top: 2%;
+        width: 720px;
+        margin-left: 5%;
+        margin-top: 3%;
     }
     .form-li{
-        width: 20%;
+        max-width: 30%;
         font-size: 15px;
-        margin-left: 10%;
+        margin-left: 0%;
+        margin-top: 1%;
+        height: 100px;
+    }
+    .input{
+        width: 200px;     
+    }
+    .liForm{
+        margin-top: 0PX;
     }
     .check{
         display: flex;
         width: 50%;
         font-size: 15px;   
-        margin-left: 25%;
+        margin-left: 28%;
         margin-top: 5%;
     }
     button{
-        margin-top: 5%;  
+        margin-top: 5%; 
+        margin-left: 6%; 
     }
     .footer{
        height: 20%;

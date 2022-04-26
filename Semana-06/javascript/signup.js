@@ -52,14 +52,49 @@ function filter(e){
         nameInputReq.style.display="none"
         nameInputReq.style.color="black"
         nameCondition = true;
-    } else{
-                    nameInput.style.color = "red"
-                    e.target.style.borderColor = "red"
-                    nameInput.style.color="red"
-                    nameInputReq.style.display="block"
-                    nameInputReq.style.color="red"
-                    nameCondition = false;
+    } else if(letterSum==0 && numSum==0 && signsSum ==0){
+        nameInputReq.innerHTML="Name is requiere"
+        nameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        nameInput.style.color="red"
+        nameInputReq.style.display="block"
+        nameInputReq.style.color="red"
+        nameCondition = false;
+    } else if(letterSum<3 && numSum==0 && signsSum ==0){
+        nameInputReq.innerHTML="More than 3 characters"
+        nameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        nameInput.style.color="red"
+        nameInputReq.style.display="block"
+        nameInputReq.style.color="red"
+        nameCondition = false;
+
+    }else if(numSum>=1 && signsSum==0){
+        nameInputReq.innerHTML="No Numbers"
+        nameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        nameInput.style.color="red"
+        nameInputReq.style.display="block"
+        nameInputReq.style.color="red"
+        nameCondition = false;
+    }else if(signsSum>=1 && numSum==0){
+        nameInputReq.innerHTML="No Signs"
+        nameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        nameInput.style.color="red"
+        nameInputReq.style.display="block"
+        nameInputReq.style.color="red"
+        nameCondition = false;
+    } else if(signsSum>=1 && numSum>=1){
+        nameInputReq.innerHTML="No Numbers or signs"
+        nameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        nameInput.style.color="red"
+        nameInputReq.style.display="block"
+        nameInputReq.style.color="red"
+        nameCondition = false;
     }
+    
 
 }
 nameInput.addEventListener("focus", (e)=>{
@@ -86,20 +121,54 @@ function filterLastname(e){
                 signsSum ++
             }
     }
-    if(letterSum>=3 && numSum==0 && signsSum ==0){
-                    e.target.style.backgroundColor = "" 
-                    lastNameInput.style.color = "black"
-                    e.target.style.borderColor = "black"
-                    lastNameInputReq.style.display="none"
-                    lastNameInputReq.style.color="black"
-                    lastNameCondition = true;
-    } else{
+    if(letterSum>=3 && numSum==0 && signsSum==0){
+        e.target.style.backgroundColor = "" 
+        lastNameInput.style.color = "black"
+        e.target.style.borderColor = "black"
+        lastNameInputReq.style.display="none"
+        lastNameInputReq.style.color="black"
+        lastNameCondition = true;
+    }else if(letterSum==0 && numSum==0 && signsSum==0){
+        lastNameInputReq.innerHTML="Last Name is requiere"
         lastNameInput.style.color = "red"
         e.target.style.borderColor = "red"
+        lastNameInput.style.color="red"
         lastNameInputReq.style.display="block"
         lastNameInputReq.style.color="red"
         lastNameCondition = false;
-    }    
+    }else if(letterSum<3 && numSum==0 && signsSum ==0){
+        lastNameInputReq.innerHTML="More than 3 characters"
+        lastNameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        lastNameInput.style.color="red"
+        lastNameInputReq.style.display="block"
+        lastNameInputReq.style.color="red"
+        lastNameCondition = false;
+    }else if(numSum>=1 && signsSum==0){
+        lastNameInputReq.innerHTML="No Numbers"
+        lastNameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        lastNameInput.style.color="red"
+        lastNameInputReq.style.display="block"
+        lastNameInputReq.style.color="red"
+        lastNameCondition = false;
+    }else if(signsSum>=1 && numSum==0){
+        lastNameInputReq.innerHTML="No Signs"
+        lastNameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        lastNameInput.style.color="red"
+        lastNameInputReq.style.display="block"
+        lastNameInputReq.style.color="red"
+        lastNameCondition = false;
+    }else if(signsSum>=1 && numSum>=1){
+        lastNameInputReq.innerHTML="No Numbers or signs"
+        lastNameInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        lastNameInput.style.color="red"
+        lastNameInputReq.style.display="block"
+        lastNameInputReq.style.color="red"
+        lastNameCondition = false;
+    }
 }
 lastNameInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -131,7 +200,36 @@ function filterdni(e){
         dniReq.style.display="none"
         dniReq.style.color="black"
         dniCondition = true;
-    } else{
+    }else if(letterSum==0 && numSum==0 && signsSum ==0){
+        dniReq.innerHTML="DNI is requiere"
+        dni.style.color = "red"
+        e.target.style.borderColor = "red"
+        dniReq.style.display="block"
+        dniReq.style.color="red"
+        dniCondition = false;
+    } else if (letterSum==0 && numSum<7 && signsSum ==0){
+        dniReq.innerHTML="More 7 numbers"
+        dni.style.color = "red"
+        e.target.style.borderColor = "red"
+        dniReq.style.display="block"
+        dniReq.style.color="red"
+        dniCondition = false;
+    }else if(letterSum>=1 && signsSum==0){
+        dniReq.innerHTML="No letters"
+        dni.style.color = "red"
+        e.target.style.borderColor = "red"
+        dniReq.style.display="block"
+        dniReq.style.color="red"
+        dniCondition = false;
+    }else if(signsSum>=1 && letterSum==0){
+        dniReq.innerHTML="No Signs"
+        dni.style.color = "red"
+        e.target.style.borderColor = "red"
+        dniReq.style.display="block"
+        dniReq.style.color="red"
+        dniCondition = false;
+    } else if(signsSum>=1 && letterSum>=1){
+        dniReq.innerHTML="No letters or signs"
         dni.style.color = "red"
         e.target.style.borderColor = "red"
         dniReq.style.display="block"
@@ -151,7 +249,10 @@ function filterDate(e){
     year = date.substring (0,4)
     month = date.substring (5,7)
     day = date.substring(8,10)
-    if(day>31 || month>12 || year<1920 || year>2023){
+    var adult = 2022 - year
+    console.log(adult)
+    if(day>31 || month>12 || year<1920 || year>2023 || adult<18){
+        dateReq.innerHTML="Invalid year or less than 18 age"
         dateInput.style.color = "red"
         dateInput.style.borderColor = "red"
         dateReq.style.display="block"
@@ -183,19 +284,47 @@ function filterPhone(e){
     }
     if(letterSum==0 && numSum>=10 && signsSum ==0){
         e.target.style.backgroundColor = "" 
-                phoneInput.style.color = "black"
-                e.target.style.borderColor = "black"
-                phoneReq.style.display="none"
-                phoneReq.style.color="black"
-                filterPhoneCondition = true;
-    } else{
+        phoneInput.style.color = "black"
+        e.target.style.borderColor = "black"
+        phoneReq.style.display="none"
+        phoneReq.style.color="black"
+        filterPhoneCondition = true;
+    } else if (letterSum==0 && numSum==0 && signsSum ==0){
+        phoneReq.innerHTML="Phone is requiere"
+        phoneInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        phoneReq.style.display="block"
+        phoneReq.style.color="red"
+        filterPhoneCondition = false;
+    }else if(numSum<10 && letterSum==0 && signsSum==0){
+        phoneReq.innerHTML="More 10 letters"
+        phoneInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        phoneReq.style.display="block"
+        phoneReq.style.color="red"
+        filterPhoneCondition = false;
+    }else if (letterSum>=1 && signsSum ==0){
+        phoneReq.innerHTML="No letters"
+        phoneInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        phoneReq.style.display="block"
+        phoneReq.style.color="red"
+        filterPhoneCondition = false;
+    }else if (letterSum==0 && signsSum >=1){
+        phoneReq.innerHTML="No Signs"
+        phoneInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        phoneReq.style.display="block"
+        phoneReq.style.color="red"
+        filterPhoneCondition = false;
+    }else if (letterSum>=1 && signsSum >=1){
+        phoneReq.innerHTML="No Signs or letters"
         phoneInput.style.color = "red"
         e.target.style.borderColor = "red"
         phoneReq.style.display="block"
         phoneReq.style.color="red"
         filterPhoneCondition = false;
     }
-                
 }
 phoneInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -221,7 +350,6 @@ function filterAdress(e){
             }
     }
     if(letterSum>=4 && numSum>=1 && signsSum ==0){
-       /*  adressInput.value = name.substring(letterSum, numSum) + "-" + name.substring() */
         e.target.style.backgroundColor = "" 
         adressInput.style.color = "black"
         e.target.style.borderColor = "black"
@@ -268,7 +396,36 @@ function filterCity(e){
         cityReq.style.display="none"
         cityReq.style.color="black"
         filterCityCondition = true;
-    } else{
+    } else if (letterSum==0 && numSum==0 && signsSum ==0){
+        cityReq.innerHTML="City is requiere"
+        cityInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        cityReq.style.display="block"
+        cityReq.style.color="red"
+        filterCityCondition = false;
+    }else if (letterSum<3 && numSum==0 && signsSum ==0){
+        cityReq.innerHTML="More 3 characters"
+        cityInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        cityReq.style.display="block"
+        cityReq.style.color="red"
+        filterCityCondition = false;
+    }else if (numSum>=1 && signsSum ==0){
+        cityReq.innerHTML="No numbers"
+        cityInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        cityReq.style.display="block"
+        cityReq.style.color="red"
+        filterCityCondition = false;
+    }else if (numSum==0 && signsSum >=1){
+        cityReq.innerHTML="No signs"
+        cityInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        cityReq.style.display="block"
+        cityReq.style.color="red"
+        filterCityCondition = false;
+    }else if (numSum>=1 && signsSum >=1){
+        cityReq.innerHTML="No signs or numbers"
         cityInput.style.color = "red"
         e.target.style.borderColor = "red"
         cityReq.style.display="block"
@@ -423,56 +580,21 @@ inputPasswordRepeat.addEventListener("focus", (e)=>{
     passwordRepeatReq.style.display="none"
 })
 buttonCreate.addEventListener("click", (e)=>{
-    console.log("hola")
-    var modalP = document.getElementById("modal-p")
-    var modalH = document.getElementById("modal-h2")
     var modal = document.getElementById("modal")
     if(inputEmail.value == "" || inputPasswordRepeat == "" || nameCondition==false || lastNameCondition == false || filterEmailCondition == false || dniCondition == false || filterPhoneCondition == false || filterAdressCondition == false || filterCityCondition == false || postalCondition == false || filterPassCondition == false || filterPassRCondition == false || filterDateCondition==false){
-        modalP.style.display="block"
-        modalH.style.display="none"
+        modalh2.innerHTML="Validation Error"
     } else{
-        modalP.style.display="none"
-        modalH.style.display="block"
-        var liName = document.createElement("li")
-        liName.classList.add("classList")
-        var liLastName=document.createElement("li")
-        liLastName.classList.add("classList")
-        var liDate=document.createElement("li")
-        liDate.classList.add("classList")
-        var liDni=document.createElement("li")
-        liDni.classList.add("classList")
-        var liEmail=document.createElement("li")
-        liEmail.classList.add("classList")
-        var liPhone=document.createElement("li")
-        liPhone.classList.add("classList")
-        var liAdress=document.createElement("li")
-        liAdress.classList.add("classList")
-        var liCity=document.createElement("li")
-        liCity.classList.add("classList")
-        var liPostal=document.createElement("li")
-        liPostal.classList.add("classList")
-        var liPass=document.createElement("li")
-        liPass.classList.add("classList")
-        liName.appendChild(document.createTextNode(`Name: ${nameInput.value}`))
-        ul.appendChild(liName)
-        liLastName.appendChild(document.createTextNode(`Last name: ${lastNameInput.value}`))
-        ul.appendChild(liLastName)
-        liDate.appendChild(document.createTextNode(`Birthday: ${dateInput.value}`))
-        ul.appendChild(liDate)
-        liDni.appendChild(document.createTextNode(`Dni: ${dni.value}`))
-        ul.appendChild(liDni)
-        liPhone.appendChild(document.createTextNode(`Phone: ${phoneInput.value}`))
-        ul.appendChild(liPhone)
-        liAdress.appendChild(document.createTextNode(`Adress: ${adressInput.value}`))
-        ul.appendChild(liAdress)
-        liCity.appendChild(document.createTextNode(`City: ${cityInput.value}`))
-        ul.appendChild(liCity)
-        liPostal.appendChild(document.createTextNode(`Postal: ${postalInput.value}`))
-        ul.appendChild(liPostal)
-        liEmail.appendChild(document.createTextNode(`Email: ${inputEmail.value}`))
-        ul.appendChild(liEmail)
-        liPass.appendChild(document.createTextNode(`Password: ${inputPassword.value}`))
-        ul.appendChild(liPass)
+        modalh2.innerHTML="Your data:"
+        ul1.innerHTML=`Name: ${nameInput.value}`
+        ul2.innerHTML=`Last name: ${lastNameInput.value}`
+        ul3.innerHTML=`Birthday: ${dateInput.value}`
+        ul4.innerHTML=`Dni: ${dni.value}`
+        ul5.innerHTML=`Phone: ${phoneInput.value}`
+        ul6.innerHTML=`Adress: ${adressInput.value}`
+        ul7.innerHTML=`City: ${cityInput.value}`
+        ul8.innerHTML=`Postal: ${postalInput.value}`
+        ul9.innerHTML=`Email: ${inputEmail.value}`
+        ul10.innerHTML=`Password: ${inputPassword.value}`
     }
     modal.style.display="block"
 })

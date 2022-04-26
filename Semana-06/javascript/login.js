@@ -8,9 +8,8 @@ var errorPassword = document.getElementById("errorPassword")
 var errorPasswordSign = document.getElementById("errorPasswordSign")
 var modal = document.getElementById("modal")
 var ul = document.getElementById("ul")
-var modalH = document.getElementById("modal-h2")
-var modalP = document.getElementById("modal-p")
 var close = document.getElementById("close")
+
 
 inputEmail.addEventListener("blur", (e)=>{
     var emailValid=/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
@@ -20,11 +19,13 @@ inputEmail.addEventListener("blur", (e)=>{
             emailText.style.color = "black"
             e.target.style.borderColor = "black"
             inputEmail.style.color="black"
+            emailV = true;
         } else {
             emailText.style.color = "red"
             e.target.style.borderColor = "red"
             inputEmail.style.color="red"
             errorEmail.style.display="block"
+            emailV = false;
         }
     
 })
@@ -91,38 +92,12 @@ button.addEventListener("click", value)
 function value(e, text,pass){
     e.preventDefault();
     modal.style.display="block"
-    if(inputEmail.value=="" || inputPassword.value=="" || inputEmail.value.includes(validE)==false || passwordValid==false){
-        console.log("completaaaa")
-        modalH.style.display="none"
-        modalP.style.display="block"
-        modalP.style.color="red"
-        modalP.style.background="white"
-        modalP.style.textAlign="center"
-        modalP.style.marginTop="20%"
-        modalP.style.paddingTop="10%"
-        modalP.style.marginRight="10%"
-        modalP.style.marginLeft="10%"
-        modalP.style.height="15%"
-        modalP.style.borderRadius="2px"
+    if(inputEmail.value == "" ||emailV==false||inputPassword.value == "" || passwordValid==false){
+        modalh2.innerHTML="Errors in user validation"
     } else{
-        modalH.style.display="block"
-        modalP.style.display="none"
-        modalH.style.fontSize="15px"
-        modalH.style.marginTop="10%"
-        modalH.style.color="white"
-        modalH.style.marginLeft="5%"
-        var liEmail=document.createElement("li")
-        liEmail.appendChild(document.createTextNode(`Email: ${inputEmail.value}`))
-        ul.appendChild(liEmail)
-        var lipass=document.createElement("li")
-        lipass.appendChild(document.createTextNode(`Password: ${inputPassword.value}`))
-        ul.appendChild(lipass)
-        liEmail.style.color="white"
-        lipass.style.color="white"
-        liEmail.style.marginLeft="5%"
-        lipass.style.marginLeft="5%"
-        liEmail.style.marginTop="5%"
-        lipass.style.marginTop="5%"
+        modalh2.innerHTML="Username and password:"
+        ul1.innerHTML=`Email: ${inputEmail.value}`
+        ul2.innerHTML=`Password: ${inputPassword.value}`
     } 
 }
 close.addEventListener("click", (e)=>{
