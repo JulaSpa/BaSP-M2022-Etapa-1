@@ -349,19 +349,27 @@ function filterAdress(e){
                 signsSum ++
             }
     }
-    if(letterSum>=4 && numSum>=1 && signsSum ==0){
+    var sumAdress= letterSum + numSum
+    console.log(sumAdress)
+    if(sumAdress>=5 && signsSum ==0){
         e.target.style.backgroundColor = "" 
         adressInput.style.color = "black"
         e.target.style.borderColor = "black"
         adressReq.style.display="none"
         adressReq.style.color="black"
         filterAdressCondition = true;
-    } else{
+    } else if (letterSum==0 ||  numSum==0 ||  signsSum >=1){ 
         adressInput.style.color = "red"
         e.target.style.borderColor = "red"
         adressReq.style.display="block"
         adressReq.style.color="red"
-        filterAdressCondition = false;
+        filterAdressCondition = false; 
+    } else {
+        adressInput.style.color = "red"
+        e.target.style.borderColor = "red"
+        adressReq.style.display="block"
+        adressReq.style.color="red"
+        filterAdressCondition = false; 
     }
    
 
@@ -581,8 +589,10 @@ inputPasswordRepeat.addEventListener("focus", (e)=>{
 })
 buttonCreate.addEventListener("click", (e)=>{
     var modal = document.getElementById("modal")
+    var listUl = document.getElementById("listUl")
     if(inputEmail.value == "" || inputPasswordRepeat == "" || nameCondition==false || lastNameCondition == false || filterEmailCondition == false || dniCondition == false || filterPhoneCondition == false || filterAdressCondition == false || filterCityCondition == false || postalCondition == false || filterPassCondition == false || filterPassRCondition == false || filterDateCondition==false){
         modalh2.innerHTML="Validation Error"
+        listUl.style.display="none"
     } else{
         modalh2.innerHTML="Your data:"
         ul1.innerHTML=`Name: ${nameInput.value}`
