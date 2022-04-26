@@ -221,6 +221,7 @@ function filterAdress(e){
             }
     }
     if(letterSum>=4 && numSum>=1 && signsSum ==0){
+       /*  adressInput.value = name.substring(letterSum, numSum) + "-" + name.substring() */
         e.target.style.backgroundColor = "" 
         adressInput.style.color = "black"
         e.target.style.borderColor = "black"
@@ -234,6 +235,7 @@ function filterAdress(e){
         adressReq.style.color="red"
         filterAdressCondition = false;
     }
+   
 
 }
 adressInput.addEventListener("focus", (e)=>{
@@ -323,11 +325,10 @@ function filterBlur(e){
     postalReq.style.display="none"
    
 })  
-var emailValid=["@","gmail",".com"]
+
 inputEmail.addEventListener("blur", (e)=>{
-    for(i=0;i<emailValid.length;i++){
-        validE=emailValid[i]  
-        if(inputEmail.value.includes(validE)){
+    var emailValid=/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
+        if(emailValid.test(e.target.value)){
             e.target.style.backgroundColor = "" 
             e.target.style.borderColor = "black"
             inputEmail.style.color="black"
@@ -338,7 +339,7 @@ inputEmail.addEventListener("blur", (e)=>{
             errorEmail.style.display="block"
             filterEmailCondition = false;
         }
-    } 
+    
 })
 inputEmail.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 

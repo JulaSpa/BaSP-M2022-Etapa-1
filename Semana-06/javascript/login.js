@@ -12,11 +12,10 @@ var modalH = document.getElementById("modal-h2")
 var modalP = document.getElementById("modal-p")
 var close = document.getElementById("close")
 
-var emailValid=["@","gmail",".com"]
 inputEmail.addEventListener("blur", (e)=>{
-    for(i=0;i<emailValid.length;i++){
-        validE=emailValid[i]
-        if(inputEmail.value.includes(validE)){
+    var emailValid=/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
+    
+        if(emailValid.test(e.target.value)){
             e.target.style.backgroundColor = "" 
             emailText.style.color = "black"
             e.target.style.borderColor = "black"
@@ -27,7 +26,7 @@ inputEmail.addEventListener("blur", (e)=>{
             inputEmail.style.color="red"
             errorEmail.style.display="block"
         }
-    }    
+    
 })
 inputEmail.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
