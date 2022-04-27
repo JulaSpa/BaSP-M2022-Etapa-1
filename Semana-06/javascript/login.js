@@ -96,8 +96,10 @@ function value(e, text,pass){
         modalh2.innerHTML="Errors in user validation"
         ul1.style.display="none"
         ul2.style.display="none"
-    } else{
+    } else if (emailV==true && passwordValid==true){
         modalh2.innerHTML="Username and password:"
+        ul1.style.display="block"
+        ul2.style.display="block"
         ul1.innerHTML=`Email: ${inputEmail.value}`
         ul2.innerHTML=`Password: ${inputPassword.value}`
     } 

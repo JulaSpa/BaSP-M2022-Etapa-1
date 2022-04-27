@@ -350,7 +350,6 @@ function filterAdress(e){
             }
     }
     var sumAdress= letterSum + numSum
-    console.log(sumAdress)
     if(sumAdress>=5 && signsSum ==0){
         e.target.style.backgroundColor = "" 
         adressInput.style.color = "black"
@@ -595,6 +594,7 @@ buttonCreate.addEventListener("click", (e)=>{
         listUl.style.display="none"
     } else{
         modalh2.innerHTML="Your data:"
+        listUl.style.display="block"
         ul1.innerHTML=`Name: ${nameInput.value}`
         ul2.innerHTML=`Last name: ${lastNameInput.value}`
         ul3.innerHTML=`Birthday: ${dateInput.value}`
