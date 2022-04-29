@@ -1,0 +1,252 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+#modal{
+    width: 70%;
+    position: fixed;
+    margin-left: 15%;
+    border-radius: 5px;
+    background-color: rgba(55, 56, 103, 1);
+    display: none;
+}
+#modal li{
+    list-style: none;
+}
+#close{
+    margin-left: 80%;
+    height: 25px;
+    width: 25px;
+    border-radius: 1px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+#modalh2{
+    font-size: 20px;
+    color: white;
+    margin-left: 5%;
+}
+#ul1,#ul2,#ul3,#ul4,#ul5,#ul6,#ul7,#ul8,#ul9,#ul10{
+    margin-top: 2%;
+    color: white;
+    margin-left: 5%;
+}
+#ul2{
+    padding-bottom: 0;
+}
+#ul10{
+    padding-bottom: 2%;
+}
+.liForm{
+    margin-top: 25%;
+}
+.form-li input {
+    margin-top: 2%;
+    height: 30%;
+}
+
+.req {
+    font-size: 8px;
+    max-width: 85%;
+    margin-top: 4%;
+}
+
+
+header{
+    width: 100%;
+    background-color: rgba(164, 164, 164, 1);
+    display: flex;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    height: 10%;
+    align-items: center;
+    padding-left: 2%;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+#nameInputReq{
+    display: none;
+}
+#lastNameInputReq{
+    display: none;
+}
+#dniReq{
+    display: none;
+}
+#phoneReq{
+    display: none;
+}
+#adressReq{
+    display: none;
+}
+#cityReq{
+    display: none;
+}
+#postalReq{
+    display: none;
+}
+#passwordReq{
+    display: none;
+}
+#passwordRepeatReq{
+    display: none;
+}
+#dateReq{
+    display: none;
+}
+.form{
+    margin-top: 10%;
+    align-self: center;
+    font-size: 12px;
+}
+button{
+    margin-top: 10%;
+    width: 150px;
+    height: 30px;
+    align-self: center;
+    background-color: #AACE9B;
+    cursor: pointer;
+    border-radius: 5px;
+   
+}
+.footer{
+    border-top: solid 5px #AACE9B;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: rgba(55, 56, 103, 1);
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+}
+.footer-p{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.footer-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: 6%;
+}
+.icons{
+    height: 5%;
+    width: 5%;
+    margin-right: 5%;
+}
+.footer-copyright{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+@media only screen and (min-width: 600px) {
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .req {
+        font-size: 12px;
+    }
+    .form-li{
+        width: 35%;
+        font-size: 15px;
+        margin-left: 15%;
+        margin-top: 10%;
+        height: 100px;
+    }
+    .input{
+        width: 90%;
+        
+    }
+    .liForm{
+        margin-top: 0PX;
+    }
+    .check{
+        display: flex;
+        width: 50%;
+        font-size: 15px;  
+        margin-left: 25%; 
+    }
+    .check h3{
+        margin-left: 0px;
+    }
+    .footer{
+        font-size: 15px;
+    }
+    .footer-p{
+        margin-left: 5%;
+    }
+    .footer-icons{
+        margin-left: 10%;
+    }
+    .footer-copyright{
+        margin-left: 5%;
+    }
+
+}
+@media only screen and (min-width: 768px){
+    #modalh2{
+        font-size: 20px;
+        color: white;
+        margin-left: 5%;
+        text-align: start;
+    }
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 720px;
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    .form-li{
+        max-width: 30%;
+        font-size: 15px;
+        margin-left: 0%;
+        margin-top: 1%;
+        height: 100px;
+    }
+    .input{
+        width: 200px;     
+    }
+    .liForm{
+        margin-top: 0PX;
+    }
+    .check{
+        display: flex;
+        width: 50%;
+        font-size: 15px;   
+        margin-left: 28%;
+        margin-top: 5%;
+    }
+    button{
+        margin-top: 5%; 
+        margin-left: 6%; 
+    }
+    .footer{
+       height: 20%;
+       bottom: 0;
+    }
+    .icons{
+        height: 35px;
+        width: 35px;
+    }
+    .footer-copyright{
+        margin-top: 2%;
+    }
+    #close{
+        height: 45px;
+        width: 45px;
+        margin-left: 90%;
+        margin-top: 1%;
+    }
+}

@@ -1,0 +1,29 @@
+@media only screen and (min-width: 768px) {
+    .welcome-text{
+        justify-content: space-around;
+        font-size: 25px;
+    }
+    .us-products{
+        font-size: 30px;
+    }
+    .us-product-li{
+        font-size: 14px;
+    }
+    .us-business{
+        font-size: 30px;
+    }
+    .us-bussines-li{
+        font-size: 14px;
+    }
+    .us-support{
+        font-size: 30px;
+    }
+    .us-support-li{
+        font-size: 14px;
+    }
+    .contact{
+        padding-left: 5%;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+  }
