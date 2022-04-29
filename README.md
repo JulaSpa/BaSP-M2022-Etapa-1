@@ -21,6 +21,6 @@ https://julaspa.github.io/BaSP-M2022-Etapa-1/Semana-05/
 In this week we have to do a validation form using javascript.
 https://julaspa.github.io/BaSP-M2022-Etapa-1/Semana-06/
 
-# Semana 06
+# Semana 07
 
 https://julaspa.github.io/BaSP-M2022-Etapa-1/Semana-07/
