@@ -18,9 +18,9 @@ In this week I did the javascript exercises.
 https://julaspa.github.io/BaSP-M2022-Etapa-1/Semana-05/
 
 # Semana 06
-In this week we have to do a validation form using javascript.
+In this week we had to do a validation form using javascript.
 https://julaspa.github.io/BaSP-M2022-Etapa-1/Semana-06/
 
 # Semana 07
-
+ In this week we have had to sent form data to an external url.
 https://julaspa.github.io/BaSP-M2022-Etapa-1/Semana-07/
