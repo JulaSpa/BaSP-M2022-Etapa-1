@@ -87,23 +87,44 @@ inputPassword.addEventListener("focus", (e)=>{
     inputPassword.style.color="black"
     errorPassword.style.display="none"
     errorPasswordSign.style.display="none"
-})  
-button.addEventListener("click", value)
-function value(e, text,pass){
-    e.preventDefault();
-    modal.style.display="block"
-    if(inputEmail.value == "" ||emailV==false||inputPassword.value == "" || passwordValid==false){
-        modalh2.innerHTML="Errors in user validation"
-        ul1.style.display="none"
-        ul2.style.display="none"
-    } else if (emailV==true && passwordValid==true){
-        modalh2.innerHTML="Username and password:"
-        ul1.style.display="block"
-        ul2.style.display="block"
-        ul1.innerHTML=`Email: ${inputEmail.value}`
-        ul2.innerHTML=`Password: ${inputPassword.value}`
-    } 
-}
+})
+
 close.addEventListener("click", (e)=>{
     modal.style.display="none"
 })
+button.addEventListener('click', getData)
+
+function getData(e){
+    var url='https://basp-m2022-api-rest-server.herokuapp.com/login'
+    url=url + "?email=" + inputEmail.value + "&password=" + inputPassword.value;
+    e.preventDefault()
+    modal.style.display="block"
+    if(inputEmail.value == "" ||emailV==false||inputPassword.value == "" ||passwordValid==false){
+        
+        fetch(url)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(res){
+            /* alert(res.errors[0].msg) */
+            modalh2.innerHTML=res.errors[0].msg
+            ul1.style.display="none"
+            ul2.style.display="none"
+
+        })
+      
+    }else{
+        fetch(url)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(res){
+            alert(`email: ${inputEmail.value} password: ${inputPassword.value}`)
+            modalh2.innerHTML="Username and password:"
+            ul1.style.display="block"
+            ul2.style.display="block"
+            ul1.innerHTML=`Email: ${inputEmail.value}`
+            ul2.innerHTML=`Password: ${inputPassword.value}`
+        })
+    }
+}

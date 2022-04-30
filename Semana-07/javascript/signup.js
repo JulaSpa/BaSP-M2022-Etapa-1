@@ -103,7 +103,9 @@ nameInput.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     nameInput.style.color="black"
     nameInputReq.style.display="none"
+    nameInput.value=localStorage.getItem("name")
 })  
+
 
 function filterLastname(e){
     var name = e.target.value
@@ -176,6 +178,7 @@ lastNameInput.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     lastNameInput.style.color="black"
     lastNameInputReq.style.display="none"
+    lastNameInput.value=localStorage.getItem("lastName")
 })  
 function filterdni(e){
     var name = e.target.value
@@ -243,6 +246,7 @@ dni.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     dni.style.color="black"
     dniReq.style.display="none"
+    dni.value=localStorage.getItem("DNI")
 }) 
 function filterDate(e){
     date = e.target.value
@@ -332,6 +336,7 @@ phoneInput.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     phoneInput.style.color="black"
     phoneReq.style.display="none"
+    phoneInput.value=localStorage.getItem("phone")
 }) 
 function filterAdress(e){
     var name = e.target.value
@@ -379,6 +384,7 @@ adressInput.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     adressInput.style.color="black"
     adressReq.style.display="none"
+    adressInput.value=localStorage.getItem("adress")
 }) 
 function filterCity(e){
     var name = e.target.value
@@ -447,6 +453,7 @@ cityInput.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     cityInput.style.color="black"
     cityReq.style.display="none"
+    cityInput.value=localStorage.getItem("city")
 }) 
 function filterBlur(e){
     var name = e.target.value
@@ -487,6 +494,7 @@ function filterBlur(e){
     e.target.style.borderColor = "black"
     postalInput.style.color="black"
     postalReq.style.display="none"
+    postalInput.value=localStorage.getItem("postal")
    
 })  
 
@@ -510,6 +518,7 @@ inputEmail.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     inputEmail.style.color="black"
     errorEmail.style.display="none"
+    inputEmail.value=localStorage.getItem("email")
 }) 
 function filterPass(e){
     var name = e.target.value
@@ -548,6 +557,7 @@ inputPassword.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     inputPassword.style.color="black"
     passwordReq.style.display="none"
+    inputPassword.value=localStorage.getItem("password")
 })
 function filterPassR(e){
     var name = e.target.value
@@ -585,29 +595,76 @@ inputPasswordRepeat.addEventListener("focus", (e)=>{
     e.target.style.borderColor = "black"
     inputPasswordRepeat.style.color="black"
     passwordRepeatReq.style.display="none"
+    inputPasswordRepeat.value=localStorage.getItem("passwordRepeat")
 })
-buttonCreate.addEventListener("click", (e)=>{
-    var modal = document.getElementById("modal")
-    var listUl = document.getElementById("listUl")
-    if(inputEmail.value == "" || inputPasswordRepeat == "" || nameCondition==false || lastNameCondition == false || filterEmailCondition == false || dniCondition == false || filterPhoneCondition == false || filterAdressCondition == false || filterCityCondition == false || postalCondition == false || filterPassCondition == false || filterPassRCondition == false || filterDateCondition==false){
-        modalh2.innerHTML="Validation Error"
-        listUl.style.display="none"
-    } else{
-        modalh2.innerHTML="Your data:"
-        listUl.style.display="block"
-        ul1.innerHTML=`Name: ${nameInput.value}`
-        ul2.innerHTML=`Last name: ${lastNameInput.value}`
-        ul3.innerHTML=`Birthday: ${dateInput.value}`
-        ul4.innerHTML=`Dni: ${dni.value}`
-        ul5.innerHTML=`Phone: ${phoneInput.value}`
-        ul6.innerHTML=`Adress: ${adressInput.value}`
-        ul7.innerHTML=`City: ${cityInput.value}`
-        ul8.innerHTML=`Postal: ${postalInput.value}`
-        ul9.innerHTML=`Email: ${inputEmail.value}`
-        ul10.innerHTML=`Password: ${inputPassword.value}`
-    }
+buttonCreate.addEventListener('click', getData)
+
+function getData(e){
+    var url='https://basp-m2022-api-rest-server.herokuapp.com/signup'
+    url=url + "?name=" + nameInput.value + "&lastName=" + lastNameInput.value + "&dni=" + dni.value + "&dob=" + dateInput.value + "&phone=" + phoneInput.value
+    + "&adress=" + adressInput.value + "&city=" + cityInput.value + "&zip=" + postalInput.value + "&email=" + inputEmail.value + "&password=" + inputPassword.value
+    e.preventDefault()
     modal.style.display="block"
-})
+    var listUl = document.getElementById("listUl")
+    if(inputEmail.value == "" || inputPasswordRepeat == "" || nameCondition==false || lastNameCondition == false || filterEmailCondition == false || dniCondition == false || filterPhoneCondition == false 
+        || filterAdressCondition == false || filterCityCondition == false || postalCondition == false || filterPassCondition == false || filterPassRCondition == false 
+        || filterDateCondition==false){
+        
+        fetch(url)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(res){
+            alert(res.errors[0].msg)
+            modalh2.innerHTML=res.errors[0].msg
+            listUl.style.display="none"
+        })
+      
+    }else{
+        fetch(url)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(res){
+            alert(`Name: ${nameInput.value}`+
+            `Last name: ${lastNameInput.value}`+
+            `Birthday: ${dateInput.value}`+
+            `Dni: ${dni.value}`+
+            `Phone: ${phoneInput.value}`+
+            `Adress: ${adressInput.value}`+
+            `City: ${cityInput.value}`+
+            `Postal: ${postalInput.value}`+
+            `Email: ${inputEmail.value}`+
+            `Password: ${inputPassword.value}`)
+            modalh2.innerHTML="Your data:"
+            listUl.style.display="block"
+            ul1.innerHTML=`Name: ${nameInput.value}`
+            ul2.innerHTML=`Last name: ${lastNameInput.value}`
+            ul3.innerHTML=`Birthday: ${dateInput.value}`
+            ul4.innerHTML=`Dni: ${dni.value}`
+            ul5.innerHTML=`Phone: ${phoneInput.value}`
+            ul6.innerHTML=`Adress: ${adressInput.value}`
+            ul7.innerHTML=`City: ${cityInput.value}`
+            ul8.innerHTML=`Postal: ${postalInput.value}`
+            ul9.innerHTML=`Email: ${inputEmail.value}`
+            ul10.innerHTML=`Password: ${inputPassword.value}`
+
+        })
+        localStorage.setItem("name", nameInput.value)
+        localStorage.setItem("lastName", lastNameInput.value)
+        localStorage.setItem("Birthday", dateInput.value)
+        localStorage.setItem("DNI", dni.value)
+        localStorage.setItem("phone", phoneInput.value)
+        localStorage.setItem("adress", adressInput.value)
+        localStorage.setItem("city", cityInput.value)
+        localStorage.setItem("postal", postalInput.value)
+        localStorage.setItem("email", inputEmail.value)
+        localStorage.setItem("password", inputPassword.value)
+        localStorage.setItem("passwordRepeat", inputPasswordRepeat.value)
+    }
+}
+
 close.addEventListener("click", (e)=>{
     modal.style.display="none"
 })
+
