@@ -106,25 +106,41 @@ function getData(e){
             return response.json()
         })
         .then(function(res){
-            /* alert(res.errors[0].msg) */
             modalh2.innerHTML=res.errors[0].msg
             ul1.style.display="none"
             ul2.style.display="none"
 
         })
+        .catch(function(err){
+            console.log("error")
+        })
       
+    }else if(inputEmail.value !='rose@radiumrocket.com'
+    ||inputPassword.value !='BaSP2022'){
+        fetch(url)
+        .then(function(res){
+            return res.json()
+        })
+        .then(function(res){
+            modalh2.innerHTML="User not found"
+            ul1.style.display="none"
+            ul2.style.display="none"
+        })
     }else{
         fetch(url)
         .then(function(response){
             return response.json()
         })
         .then(function(res){
-            alert(`email: ${inputEmail.value} password: ${inputPassword.value}`)
+            alert(res.msg)
             modalh2.innerHTML="Username and password:"
             ul1.style.display="block"
             ul2.style.display="block"
             ul1.innerHTML=`Email: ${inputEmail.value}`
             ul2.innerHTML=`Password: ${inputPassword.value}`
+        })
+        .catch(function(err){
+            console.log("error")
         })
     }
 }

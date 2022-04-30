@@ -619,6 +619,9 @@ function getData(e){
             modalh2.innerHTML=res.errors[0].msg
             listUl.style.display="none"
         })
+        .catch(function(err){
+            console.log("error")
+        })
       
     }else{
         fetch(url)
@@ -649,6 +652,9 @@ function getData(e){
             ul9.innerHTML=`Email: ${inputEmail.value}`
             ul10.innerHTML=`Password: ${inputPassword.value}`
 
+        })
+        .catch(function(err){
+            console.log("error")
         })
         localStorage.setItem("name", nameInput.value)
         localStorage.setItem("lastName", lastNameInput.value)
