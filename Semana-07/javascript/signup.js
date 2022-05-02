@@ -588,8 +588,12 @@ inputPasswordRepeat.addEventListener("focus", (e)=>{
 })
 buttonCreate.addEventListener('click', getData)
 function getData(e){
+    var date = new Date(dateInput.value);
+        var month = (1 + date.getMonth()).toString().padStart(2, '0');
+        var day = date.getDate().toString().padStart(2, '0');
+        formattedDate = month + '/' + day + '/' + date.getFullYear();
     var url='https://basp-m2022-api-rest-server.herokuapp.com/signup'
-    url=url + "?name=" + nameInput.value + "&lastName=" + lastNameInput.value + "&dni=" + dni.value + "&dob=" + dateInput.value + "&phone=" + phoneInput.value
+    url=url + "?name=" + nameInput.value + "&lastName=" + lastNameInput.value + "&dni=" + dni.value + "&dob=" + formattedDate + "&phone=" + phoneInput.value
     + "&address=" + adressInput.value + "&city=" + cityInput.value + "&zip=" + postalInput.value + "&email=" + inputEmail.value + "&password=" + inputPassword.value
     e.preventDefault()
     modal.style.display="block"
