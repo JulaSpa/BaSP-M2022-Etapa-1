@@ -40,7 +40,6 @@ a{
 }
 header{
     width: 100%;
-    background-color: rgba(164, 164, 164, 1);
     display: flex;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -48,6 +47,8 @@ header{
     height: 10%;
     align-items: center;
     padding-left: 2%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 2px #AACE9B;
     
 }
 section{
@@ -90,6 +91,11 @@ section h2{
     color: red;
     margin-top: 1%;
 }
+#errorPasswordSeven{
+    display: none;
+    color: red;
+    margin-top: 1%;
+}
 .check{
     display: flex;
     justify-content: space-around;
@@ -98,24 +104,36 @@ section h2{
     font-size: 12px;
     
 }
-button{
+
+.buttons{
     margin-top: 10%;
+    display: flex;
+    width: 320px;
+    justify-content: space-around;
+    align-self: center;
+}
+button{
     width: 150px;
     height: 30px;
-    align-self: center;
     background-color: #AACE9B;
     border-radius: 4px;
     cursor: pointer;
-   
 }
-.footer{
+#button-signup{
+    width: 150px;
+    height: 30px;
+    background-color: #AACE9B;
+    border-radius: 4px;
+    cursor: pointer;
+}
+footer{
     border-top: solid 5px #AACE9B;
     display: flex;
-    color: white;
+    color: rgb(0, 0, 0);
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: rgba(55, 56, 103, 1);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     margin-top: 10%;
 }
@@ -147,8 +165,11 @@ button{
         font-size: 15px;  
         margin-left: 25%; 
     }
-    .footer{
+    footer{
         font-size: 15px;
+    }
+    .buttons{
+        width: 350px;
     }
 
 }
@@ -180,7 +201,7 @@ button{
         margin-top: 0%;
         align-self: center;
     }
-    .footer{
+    footer{
         height: 20%;
         bottom: 0;
      }
@@ -217,6 +238,9 @@ button{
         margin-top: 3%;
         padding-bottom: 5%;
         margin-left: 5%;
+    }
+    .buttons{
+        width: 400px;
     }
   
 }

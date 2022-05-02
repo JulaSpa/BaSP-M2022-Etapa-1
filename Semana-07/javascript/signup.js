@@ -12,8 +12,6 @@ var inputPassword = document.getElementById("inputPassword")
 var inputPasswordRepeat = document.getElementById("inputPasswordRepeat")
 var buttonCreate = document.getElementById("button")
 var close = document.getElementById("close")
-
-
 nameInput.addEventListener("blur",filter)
 lastNameInput.addEventListener("blur",filterLastname)
 dni.addEventListener("blur",filterdni)
@@ -24,11 +22,9 @@ postalInput.addEventListener("blur",filterBlur)
 inputPassword.addEventListener("blur",filterPass)
 inputPasswordRepeat.addEventListener("blur",filterPassR)
 dateInput.addEventListener("blur", filterDate)
-
-var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," "];
 var nums = ["0","1","2","3","4","5","6","7","8","9"];
 var signs = ["!","#","$","%","&","/","(",")","=","?","¡","¿","+","*","[","]","{","}","-","."];
-
 function filter(e){
     var name = e.target.value
     nameInputReq = document.getElementById("nameInputReq")
@@ -45,14 +41,14 @@ function filter(e){
                 signsSum ++
             }
     }
-    if(letterSum>=3 && numSum==0 && signsSum ==0){
+    if(letterSum>=3 && numSum===0 && signsSum ===0){
         e.target.style.backgroundColor = "" 
         nameInput.style.color = "black"
         e.target.style.borderColor = "black"
         nameInputReq.style.display="none"
         nameInputReq.style.color="black"
         nameCondition = true;
-    } else if(letterSum==0 && numSum==0 && signsSum ==0){
+    } else if(letterSum===0 && numSum===0 && signsSum===0){
         nameInputReq.innerHTML="Name is requiere"
         nameInput.style.color = "red"
         e.target.style.borderColor = "red"
@@ -60,7 +56,7 @@ function filter(e){
         nameInputReq.style.display="block"
         nameInputReq.style.color="red"
         nameCondition = false;
-    } else if(letterSum<3 && numSum==0 && signsSum ==0){
+    } else if(letterSum<3 && numSum===0 && signsSum===0){
         nameInputReq.innerHTML="More than 3 characters"
         nameInput.style.color = "red"
         e.target.style.borderColor = "red"
@@ -69,7 +65,7 @@ function filter(e){
         nameInputReq.style.color="red"
         nameCondition = false;
 
-    }else if(numSum>=1 && signsSum==0){
+    }else if(numSum>=1 && signsSum===0){
         nameInputReq.innerHTML="No Numbers"
         nameInput.style.color = "red"
         e.target.style.borderColor = "red"
@@ -77,7 +73,7 @@ function filter(e){
         nameInputReq.style.display="block"
         nameInputReq.style.color="red"
         nameCondition = false;
-    }else if(signsSum>=1 && numSum==0){
+    }else if(signsSum>=1 && numSum===0){
         nameInputReq.innerHTML="No Signs"
         nameInput.style.color = "red"
         e.target.style.borderColor = "red"
@@ -94,8 +90,6 @@ function filter(e){
         nameInputReq.style.color="red"
         nameCondition = false;
     }
-    
-
 }
 nameInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -105,8 +99,6 @@ nameInput.addEventListener("focus", (e)=>{
     nameInputReq.style.display="none"
     nameInput.value=localStorage.getItem("name")
 })  
-
-
 function filterLastname(e){
     var name = e.target.value
     nameInputReq = document.getElementById("nameInputReq")
@@ -375,8 +367,6 @@ function filterAdress(e){
         adressReq.style.color="red"
         filterAdressCondition = false; 
     }
-   
-
 }
 adressInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
@@ -446,7 +436,6 @@ function filterCity(e){
         filterCityCondition = false;
     }
 }
-
 cityInput.addEventListener("focus", (e)=>{
     e.target.style.backgroundColor = "" 
     cityInput.style.color = "black"
@@ -598,11 +587,10 @@ inputPasswordRepeat.addEventListener("focus", (e)=>{
     inputPasswordRepeat.value=localStorage.getItem("passwordRepeat")
 })
 buttonCreate.addEventListener('click', getData)
-
 function getData(e){
     var url='https://basp-m2022-api-rest-server.herokuapp.com/signup'
     url=url + "?name=" + nameInput.value + "&lastName=" + lastNameInput.value + "&dni=" + dni.value + "&dob=" + dateInput.value + "&phone=" + phoneInput.value
-    + "&adress=" + adressInput.value + "&city=" + cityInput.value + "&zip=" + postalInput.value + "&email=" + inputEmail.value + "&password=" + inputPassword.value
+    + "&address=" + adressInput.value + "&city=" + cityInput.value + "&zip=" + postalInput.value + "&email=" + inputEmail.value + "&password=" + inputPassword.value
     e.preventDefault()
     modal.style.display="block"
     var listUl = document.getElementById("listUl")
@@ -639,7 +627,7 @@ function getData(e){
             `Postal: ${postalInput.value}`+
             `Email: ${inputEmail.value}`+
             `Password: ${inputPassword.value}`)
-            modalh2.innerHTML="Your data:"
+            modalh2.innerHTML="Successful Sign up!"
             listUl.style.display="block"
             ul1.innerHTML=`Name: ${nameInput.value}`
             ul2.innerHTML=`Last name: ${lastNameInput.value}`
@@ -669,7 +657,6 @@ function getData(e){
         localStorage.setItem("passwordRepeat", inputPasswordRepeat.value)
     }
 }
-
 close.addEventListener("click", (e)=>{
     modal.style.display="none"
 })

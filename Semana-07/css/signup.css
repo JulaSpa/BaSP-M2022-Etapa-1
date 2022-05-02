@@ -54,7 +54,6 @@ a{
 
 header{
     width: 100%;
-    background-color: rgba(164, 164, 164, 1);
     display: flex;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
@@ -62,6 +61,8 @@ header{
     height: 10%;
     align-items: center;
     padding-left: 2%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 2px #AACE9B;
 }
 section{
     display: flex;
@@ -107,26 +108,37 @@ section{
     align-self: center;
     font-size: 12px;
 }
-button{
+.buttons{
     margin-top: 10%;
+    display: flex;
+    width: 320px;
+    justify-content: space-around;
+    align-self: center;
+}
+button{
     width: 150px;
     height: 30px;
-    align-self: center;
     background-color: #AACE9B;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
-   
 }
-.footer{
+#button-signup{
+    width: 150px;
+    height: 30px;
+    background-color: #AACE9B;
+    border-radius: 4px;
+    cursor: pointer;
+}
+footer{
     border-top: solid 5px #AACE9B;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    background-color: rgba(55, 56, 103, 1);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     margin-top: 10%;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .footer-p{
     display: flex;
@@ -177,10 +189,14 @@ button{
         font-size: 15px;  
         margin-left: 25%; 
     }
+    .buttons{
+        width: 350px;
+        margin-left: 5%;
+    }
     .check h3{
         margin-left: 0px;
     }
-    .footer{
+    footer{
         font-size: 15px;
     }
     .footer-p{
@@ -209,7 +225,7 @@ button{
         margin-top: 3%;
     }
     .form-li{
-        max-width: 30%;
+        max-width: 35%;
         font-size: 15px;
         margin-left: 0%;
         margin-top: 1%;
@@ -228,11 +244,8 @@ button{
         margin-left: 28%;
         margin-top: 5%;
     }
-    button{
-        margin-top: 5%; 
-        margin-left: 6%; 
-    }
-    .footer{
+   
+    footer{
        height: 20%;
        bottom: 0;
     }
@@ -248,5 +261,10 @@ button{
         width: 45px;
         margin-left: 90%;
         margin-top: 1%;
+    }
+    .buttons{
+        width: 600px;
+        justify-content: space-around;
+        margin-left: 5%;
     }
 }

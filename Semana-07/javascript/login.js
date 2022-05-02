@@ -6,14 +6,12 @@ var errorEmail= document.getElementById("errorEmail")
 var passwordText = document.getElementById("passwordText")
 var errorPassword = document.getElementById("errorPassword")
 var errorPasswordSign = document.getElementById("errorPasswordSign")
+var errorPasswordSeven = document.getElementById("errorPasswordSeven")
 var modal = document.getElementById("modal")
 var ul = document.getElementById("ul")
 var close = document.getElementById("close")
-
-
 inputEmail.addEventListener("blur", (e)=>{
     var emailValid=/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
-    
         if(emailValid.test(e.target.value)){
             e.target.style.backgroundColor = "" 
             emailText.style.color = "black"
@@ -39,7 +37,6 @@ inputEmail.addEventListener("focus", (e)=>{
 var chars = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var nums = ["0","1","2","3","4","5","6","7","8","9"];
 var signs = ["!","#","$","%","&","/","(",")","=","?","¡","¿","+","*","[","]","{","}","-","."];
-
 inputPassword.addEventListener("keyup",filter)
 inputPassword.addEventListener("blur",filter)
 function filter(e){
@@ -58,15 +55,18 @@ function filter(e){
                 signsSum ++
             }
     }
-    if(letterSum>=1 && numSum>=1 && signsSum ==0){
+    var sumName = numSum + letterSum
+    console.log(sumName)
+    if(sumName>7 && signsSum ==0){
         e.target.style.backgroundColor = "" 
         passwordText.style.color = "black"
         e.target.style.borderColor = "black"
         inputPassword.style.color="black"
         errorPassword.style.display="none"
         errorPasswordSign.style.display="none"
+        errorPasswordSeven.style.display="none"
         passwordValid = true;
-    } else if(letterSum==0 || numSum==0 && signsSum ==0){
+    } else if(sumName==0 && signsSum ==0){
         passwordText.style.color = "red"
         e.target.style.borderColor = "red"
         inputPassword.style.color="red"
@@ -78,6 +78,12 @@ function filter(e){
         inputPassword.style.color="red"
         errorPasswordSign.style.display="block"
         passwordValid=false; 
+    } else if(numSum<7){
+        passwordText.style.color = "red"
+        e.target.style.borderColor = "red"
+        inputPassword.style.color="red"
+        errorPasswordSeven.style.display="block"
+        passwordValid=false; 
     }
 }
 inputPassword.addEventListener("focus", (e)=>{
@@ -88,19 +94,16 @@ inputPassword.addEventListener("focus", (e)=>{
     errorPassword.style.display="none"
     errorPasswordSign.style.display="none"
 })
-
 close.addEventListener("click", (e)=>{
     modal.style.display="none"
 })
 button.addEventListener('click', getData)
-
 function getData(e){
     var url='https://basp-m2022-api-rest-server.herokuapp.com/login'
     url=url + "?email=" + inputEmail.value + "&password=" + inputPassword.value;
     e.preventDefault()
     modal.style.display="block"
-    if(inputEmail.value == "" ||emailV==false||inputPassword.value == "" ||passwordValid==false){
-        
+    if(inputEmail.value == "" ||emailV==false||inputPassword.value == "" || passwordValid==false){
         fetch(url)
         .then(function(response){
             return response.json()
@@ -114,7 +117,6 @@ function getData(e){
         .catch(function(err){
             console.log("error")
         })
-      
     }else if(inputEmail.value !='rose@radiumrocket.com'
     ||inputPassword.value !='BaSP2022'){
         fetch(url)
@@ -122,7 +124,7 @@ function getData(e){
             return res.json()
         })
         .then(function(res){
-            modalh2.innerHTML="User not found"
+            modalh2.innerHTML=res.msg
             ul1.style.display="none"
             ul2.style.display="none"
         })
