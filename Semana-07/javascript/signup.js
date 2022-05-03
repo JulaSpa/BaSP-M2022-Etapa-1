@@ -278,7 +278,8 @@ function filterPhone(e){
                 signsSum ++
             }
     }
-    if(letterSum==0 && numSum>=10 && signsSum ==0){
+    console.log(numSum)
+    if(letterSum==0 && numSum===10 && signsSum ==0){
         e.target.style.backgroundColor = "" 
         phoneInput.style.color = "black"
         e.target.style.borderColor = "black"
@@ -292,8 +293,8 @@ function filterPhone(e){
         phoneReq.style.display="block"
         phoneReq.style.color="red"
         filterPhoneCondition = false;
-    }else if(numSum<10 && letterSum==0 && signsSum==0){
-        phoneReq.innerHTML="More 10 letters"
+    }else if(numSum<10  || numSum>10 && letterSum==0 && signsSum==0){
+        phoneReq.innerHTML="Only 10 numbers"
         phoneInput.style.color = "red"
         e.target.style.borderColor = "red"
         phoneReq.style.display="block"
@@ -347,14 +348,14 @@ function filterAdress(e){
             }
     }
     var sumAdress= letterSum + numSum
-    if(sumAdress>=5 && signsSum ==0){
+    if(sumAdress>=5 && signsSum ==0 && name.indexOf(" ")>1){
         e.target.style.backgroundColor = "" 
         adressInput.style.color = "black"
         e.target.style.borderColor = "black"
         adressReq.style.display="none"
         adressReq.style.color="black"
         filterAdressCondition = true;
-    } else if (letterSum==0 ||  numSum==0 ||  signsSum >=1){ 
+    } else if (letterSum==0 ||  numSum==0 ||  signsSum >=1 || name.indexOf(" ")<1){ 
         adressInput.style.color = "red"
         e.target.style.borderColor = "red"
         adressReq.style.display="block"
@@ -631,7 +632,7 @@ function getData(e){
             `Postal: ${postalInput.value}`+
             `Email: ${inputEmail.value}`+
             `Password: ${inputPassword.value}`)
-            modalh2.innerHTML="Successful Sign up!"
+            modalh2.innerHTML=res.msg
             listUl.style.display="block"
             ul1.innerHTML=`Name: ${nameInput.value}`
             ul2.innerHTML=`Last name: ${lastNameInput.value}`
