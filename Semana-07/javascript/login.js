@@ -134,8 +134,7 @@ function getData(e){
             return response.json()
         })
         .then(function(res){
-            alert(res.msg)
-            modalh2.innerHTML="Username and password:"
+            modalh2.innerHTML=res.msg
             ul1.style.display="block"
             ul2.style.display="block"
             ul1.innerHTML=`Email: ${inputEmail.value}`
